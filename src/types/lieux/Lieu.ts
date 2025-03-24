@@ -22,29 +22,29 @@ export type Lieu = {
 
 export const lieuParDefaut: Lieu = {
     pays: Pays.empire,
-    province: Province.reikland,
-    sousProvince: SousProvince.ducheUbersreik,
-    ville: Ville.ubersreik,
+    province: Province.italia,
+    sousProvince: SousProvince.latium,
+    ville: Ville.rome,
     maison: null,
     enVoyage:false,
     residenceVoyage: null,
 };
 
-export const lieuAltdorf: Lieu = {
+export const lieuRome: Lieu = {
     pays: Pays.empire,
-    province: Province.reikland,
-    sousProvince: SousProvince.ducheUbersreik,
-    ville: Ville.gotheim,
+    province: Province.italia,
+    sousProvince: SousProvince.latium,
+    ville: Ville.rome,
     maison: null,
     enVoyage:false,
     residenceVoyage: null,
 };
 
-export const enVoyageAUbersreik: Lieu = {
+export const enVoyageEnCampanie: Lieu = {
     pays: Pays.empire,
-    province: Province.middenland,
-    sousProvince: SousProvince.ducheMiddenheim,
-    ville: Ville.middenheim,
+    province: Province.hispania,
+    sousProvince: SousProvince.campanie,
+    ville: Ville.herculanum,
     maison: null,
     enVoyage:true,
     residenceVoyage: null,
@@ -66,7 +66,7 @@ export function getProvinceDeSousProvince(sousProvince: SousProvince): Province 
 }
 
 export function auBordDeLaRiviere(perso: Perso): boolean {
-    if (perso.lieu.province === Province.reikland) return true; // il y a des rivières partout là dedans...
+    if (perso.lieu.province === Province.gallia) return true; // il y a des rivières partout là dedans...
 
     return false;
 }

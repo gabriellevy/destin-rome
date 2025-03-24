@@ -29,20 +29,10 @@ import {
     EMPIRE_PRENOMS_F,
     EMPIRE_PRENOMS_M
 } from "../../donnees/noms/humains/empire.ts";
-import { Mistral } from '@mistralai/mistralai';
 
 interface CharacterFormProps {
     setAfficherForm: (afficher: boolean) => void;
 }
-
-const apiKey = "7UONvgMrpBDYOfSwplV4OaeBGbIO45o9";
-
-const client = new Mistral({apiKey: apiKey});
-
-const chatResponse = await client.chat.complete({
-    model: 'mistral-large-latest',
-    messages: [{role: 'user', content: 'What is the best French cheese?'}],
-});
 
 export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
     const { setPerso } = useContext(PersoContexte) as PersoContexteType;
@@ -120,10 +110,6 @@ export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
             reader.readAsText(file);
         }
     };
-
-    if (chatResponse && chatResponse.choices && chatResponse.choices.length > 0 ) {
-        console.log('Chat:', chatResponse.choices[0].message.content);
-    }
 
     return (
         <Paper elevation={3} sx={{ p: 3, mt: 4, height: '100%', overflowY: 'auto' }}>

@@ -1,36 +1,96 @@
 import {Ville} from "./villes.ts";
 
 export enum SousProvince {
-    ducheUbersreik = "Duché d'Ubersreik",
-    principauteAltdorf = "Principauté d'Altdorf",
-    middenland = "middenland",
-    ducheMiddenheim = "Duché de Middenheim",
-    waldenhof = 'Waldenhof',
-    heisenberg = 'Heisenberg',
-    halstedt = 'Halstedt',
+    latium = "Latium",
+    campanie = "Campanie",
+    tuscia = "Tuscia",
+    umbria = "Umbria",
+    aemilia = "Aemilia",
+    Venetia = "Venetia",
+    Liguria = "Liguria",
+    Pedemontium = "Pedemontium",
+    Insubria = "Insubria",
+    Sicilia = "Sicilia",
+    Sardinia = "Sardinia",
+    Bruttium = "Bruttium",
+    Apulia = "Apulia",
+    Lucania = "Lucania",
+    Sabinum = "Sabinum",
+    Samnium = "Samnium",
 
     sousProvinceInconnue = 'Sous province inconnue',
 }
 
 export function getVilles(sousProvinceStr: string):Ville[] {
     switch (sousProvinceStr) {
-        case SousProvince.ducheUbersreik : return [Ville.ubersreik, Ville.gotheim];
-        case SousProvince.principauteAltdorf : return [Ville.altdorf, Ville.frederheim];
-        case SousProvince.middenland : return [
-            Ville.kutenholz,
-            Ville.coeurDeLaForet,
-            Ville.brockel,
-            Ville.mittelweg,
-            Ville.delberz,
-            Ville.sotturn,
-            Ville.malstedt,
-            Ville.grubentreich,
-            Ville.schoninghagen,
+        case SousProvince.latium : return [Ville.rome, Ville.ostia, Ville.tivoli];
+        case SousProvince.campanie : return [
+            Ville.pompei,
+            Ville.herculanum,
+            Ville.capua,
+            Ville.neapolis
         ];
-        case SousProvince.ducheMiddenheim : return [Ville.middenheim, Ville.dunkelbild];
-        case SousProvince.waldenhof : return [Ville.waldenhof];
-        case SousProvince.heisenberg : return [Ville.heisenberg];
-        case SousProvince.halstedt : return [Ville.halstedt];
+        case SousProvince.tuscia : return [
+            Ville.florentia,
+            Ville.pisae,
+            Ville.luca,
+        ];
+        case SousProvince.umbria : return [
+            Ville.perusia,
+            Ville.asisium,
+        ];
+        case SousProvince.aemilia : return [
+            Ville.bononia,
+            Ville.Ariminum,
+            Ville.Parma,
+        ];
+        case SousProvince.Venetia : return [
+            Ville.Verona,
+            Ville.Patavium,
+            Ville.Aquileia,
+        ];
+        case SousProvince.Liguria : return [
+            Ville.Genua,
+            Ville.Savo,
+        ];
+        case SousProvince.Pedemontium : return [
+            Ville.AugustaTaurinorum,
+            Ville.AugustaPraetoria,
+        ];
+        case SousProvince.Insubria : return [
+            Ville.Mediolanum,
+            Ville.Comum,
+        ];
+        case SousProvince.Sicilia : return [
+            Ville.Syracusae,
+            Ville.Panormus,
+            Ville.Catana,
+        ];
+        case SousProvince.Sardinia : return [
+            Ville.Caralis,
+            Ville.Olbia,
+        ];
+        case SousProvince.Bruttium : return [
+            Ville.Rhegium,
+            Ville.Croton,
+        ];
+        case SousProvince.Apulia : return [
+            Ville.Barium,
+            Ville.Brundisium,
+        ];
+        case SousProvince.Lucania : return [
+            Ville.Potentia,
+            Ville.Mateola,
+        ];
+        case SousProvince.Sabinum  : return [
+            Ville.Amiternum,
+            Ville.Teate,
+        ];
+        case SousProvince.Samnium : return [
+            Ville.Potentia,
+            Ville.CampusBassus,
+            Ville.Aesernia,
+        ];
     }
     return [];
 }

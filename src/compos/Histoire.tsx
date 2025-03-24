@@ -1,24 +1,18 @@
 import {useState, useEffect, useContext, useCallback, useRef} from 'react';
-import {evts_ubersreik} from "../donnees/evts/lieux/reikland/ubersreik/evts_ubersreik.ts";
 import {Evt, EvtExecute, filtrerEtPreparerEvts} from "../types/Evt.ts";
 import {jourStr, leTempsPasse} from "../types/Date.ts";
 import {evts_calendrier} from "../donnees/evts/evts_calendrier.ts";
 import {evts_dunkelbild} from "../donnees/evts/lieux/evts_dunkelbild.ts";
-import {evts_sylvanie} from "../donnees/evts/lieux/evts_sylvanie.ts";
 import {evts_wissenland} from "../donnees/evts/lieux/evts_wissenland.ts";
 import {evts_altdorf} from "../donnees/evts/lieux/reikland/evts_altdorf.ts";
-import {evts_talabecland} from "../donnees/evts/lieux/evts_talabecland.ts";
 import {evts_ostermark} from "../donnees/evts/lieux/evts_ostermark.ts";
-import {evts_stirland} from "../donnees/evts/lieux/evts_stirland.ts";
 import {evts_crime} from "../donnees/evts/carrieres/evts_crime.ts";
 import {evts_pretres} from "../donnees/evts/carrieres/evts_pretres.ts";
 import {evts_ubersreik_nains} from "../donnees/evts/lieux/reikland/ubersreik/evts_ubersreik_nains.ts";
 import {evts_ingenieur} from "../donnees/evts/carrieres/evts_ingenieur.ts";
 import {evts_batelier} from "../donnees/evts/carrieres/evts_bateliers.ts";
-import {evts_carnaval} from "../donnees/evts/lieux/middenland/middenheim/evts_carnaval.ts";
 import {PersoContexte, PersoContexteType} from "../contexte/ContexteTypes.ts";
 import {evts_empireEI} from "../donnees/evts/histoire/ennemi_intérieur/evts_empireEI.ts";
-import {evts_middenland} from "../donnees/evts/lieux/middenland/evts_middenland.ts";
 import {evts_tout} from "../donnees/evts/evts_tout.ts";
 import {evts_serveur} from "../donnees/evts/carrieres/evts_serveur.ts";
 import {evts_bourgmestre} from "../donnees/evts/carrieres/evts_bourgmestre.ts";
@@ -89,21 +83,16 @@ export default function Histoire() {
 
         // filtrer les evts non applicables
         const evtsApplicables: Evt[] = [
-            ...filtrerEtPreparerEvts(evts_ubersreik, perso),
             ...filtrerEtPreparerEvts(evts_gotheim, perso),
             ...filtrerEtPreparerEvts(evts_ubersreik_nains, perso),
             ...filtrerEtPreparerEvts(evts_calendrier, perso),
             ...filtrerEtPreparerEvts(evts_dunkelbild, perso),
-            ...filtrerEtPreparerEvts(evts_sylvanie, perso),
             ...filtrerEtPreparerEvts(evts_wissenland, perso),
             ...filtrerEtPreparerEvts(evts_altdorf, perso),
-            ...filtrerEtPreparerEvts(evts_talabecland, perso),
             ...filtrerEtPreparerEvts(evts_ostermark, perso),
-            ...filtrerEtPreparerEvts(evts_stirland, perso),
             ...filtrerEtPreparerEvts(evts_crime, perso),
             ...filtrerEtPreparerEvts(evts_pretres, perso),
             ...filtrerEtPreparerEvts(evts_ingenieur, perso),
-            ...filtrerEtPreparerEvts(evts_carnaval, perso),
             ...filtrerEtPreparerEvts(evts_batelier, perso),
             ...filtrerEtPreparerEvts(evts_serveur, perso),
             ...filtrerEtPreparerEvts(evts_macon, perso),
@@ -111,7 +100,6 @@ export default function Histoire() {
             ...filtrerEtPreparerEvts(evts_boulanger, perso),
             ...filtrerEtPreparerEvts(evts_boucher, perso),
             ...filtrerEtPreparerEvts(evts_empireEI, perso),
-            ...filtrerEtPreparerEvts(evts_middenland, perso),
             ...filtrerEtPreparerEvts(evts_forgeron, perso),
             ...filtrerEtPreparerEvts(evts_brasseur, perso),
             ...filtrerEtPreparerEvts(evts_barbierChirurgien, perso),

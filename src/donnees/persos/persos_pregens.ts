@@ -1,6 +1,6 @@
 import {Race} from "../races/Races.ts";
 import {anneesToJours} from "../../types/Date.ts";
-import {enVoyageAUbersreik, lieuAltdorf, lieuParDefaut} from "../../types/lieux/Lieu.ts";
+import {enVoyageEnCampanie, lieuRome, lieuParDefaut} from "../../types/lieux/Lieu.ts";
 import {MetalStatut} from "../../types/Statut.ts";
 import {Perso, Sexe} from "../../types/Perso.ts";
 import {caracsDeBase} from "../../types/caracs/Caracs.ts";
@@ -54,7 +54,7 @@ export const jeuneHommeEnVoyageAUbersreik: Perso = {
     dateNaissance: anneesToJours(2482), // entre 2482 et 2502 comme ça le perso a entre 10 et 30 ans quand l'ennemi intérieur démarre
     date: anneesToJours(2502), // pas laisser trop de liberté au joueur là dessus
     jourDuMois: -1,
-    lieu: enVoyageAUbersreik,
+    lieu: enVoyageEnCampanie,
     statut: {rang: 2, metalStatut: MetalStatut.argent},
     carrieres: new Map<metiersEnum, Carriere>,
     caracs: caracsDeBase(Race.humain),
@@ -76,7 +76,7 @@ export const bourgeoisDAltdorf: Perso = {
     anneeDeDepart: 2511,
     age: 16,
     jourDuMois: -1,
-    lieu: lieuAltdorf,
+    lieu: lieuRome,
     statut: {rang: 1, metalStatut: MetalStatut.argent},
     carrieres: new Map<metiersEnum, Carriere>([[metiersEnum.bourgmestre, metierTest]]),
     caracs: caracsDeBase(Race.humain),
@@ -95,7 +95,7 @@ export const nainEnVoyageAUbersreik: Perso = {
     dateNaissance: anneesToJours(2018),
     date: anneesToJours(2502),
     jourDuMois: -1,
-    lieu: enVoyageAUbersreik,
+    lieu: enVoyageEnCampanie,
     statut: {rang: 2, metalStatut: MetalStatut.argent},
     carrieres: new Map<metiersEnum, Carriere>,
     caracs: caracsDeBase(Race.nain),

@@ -2,42 +2,71 @@ import {Option} from "../../types/lieux/Lieu.ts";
 import {SousProvince} from "./sousProvince.ts";
 
 export enum Province {
-    reikland = 'Reikland',
-    middenland = 'Middenland',
-    sylvanie = 'Sylvanie',
-    wissenland = 'Wissenland',
-    talabecland = 'Talabecland',
-    ostermark = 'Ostermark',
-    stirland = 'Stirland',
+    gallia = 'Gallia',
+    hispania = 'Hispania',
+    britannia = 'Britannia',
+    germania = 'Germania',
+    italia = 'Italia',
+    africa = 'Africa',
+    aegyptus = 'Aegyptus',
+    syria = 'Syria',
+    iudaea = 'Iudaea',
+    asia = 'Asia',
+    macedonia = 'Macedonia',
+    achaea = 'Achaea',
+    dacia = 'Dacia',
+    pannonia = 'Pannonia',
+    moesia = 'Moesia',
 
     provinceInconnue = 'Province inconnue',
 }
 
 export const provinceOptions: Option[]= [
-    { value: Province.reikland, label: Province.reikland},
-    { value: Province.middenland, label: Province.middenland},
-    { value: Province.sylvanie, label: Province.sylvanie},
-    { value: Province.wissenland, label: Province.wissenland},
-    { value: Province.talabecland, label: Province.talabecland},
-    { value: Province.ostermark, label: Province.ostermark},
-    { value: Province.stirland, label: Province.stirland},
+    { value: Province.gallia, label: Province.gallia},
+    { value: Province.hispania, label: Province.hispania},
+    { value: Province.britannia, label: Province.britannia},
+    { value: Province.germania, label: Province.germania},
+    { value: Province.italia, label: Province.italia},
+    { value: Province.africa, label: Province.africa},
+    { value: Province.aegyptus, label: Province.aegyptus},
 ];
 
 export function getSousProvinces(provinceStr: string):SousProvince[] {
     switch (provinceStr) {
-        case Province.reikland : return [
-            SousProvince.ducheUbersreik,
-            SousProvince.principauteAltdorf
+        case Province.gallia : return [
+            // TODO
         ];
-        case Province.middenland : return [
-            SousProvince.ducheMiddenheim,
-            SousProvince.middenland
+        case Province.hispania : return [
+            // TODO
         ];
-        case Province.sylvanie : return [SousProvince.waldenhof];
-        case Province.wissenland : return [SousProvince.heisenberg];
-        case Province.talabecland : return [];
-        case Province.ostermark : return [];
-        case Province.stirland : return [SousProvince.halstedt];
+        case Province.britannia : return [
+        // TODO
+        ];
+        case Province.germania : return [
+            // TODO
+        ];
+        case Province.italia : return [
+            SousProvince.latium,
+            SousProvince.campanie,
+            SousProvince.tuscia,
+            SousProvince.umbria,
+            SousProvince.aemilia,
+            SousProvince.Venetia,
+            SousProvince.Liguria,
+            SousProvince.Pedemontium,
+            SousProvince.Insubria,
+            SousProvince.Sicilia,
+            SousProvince.Sardinia,
+            SousProvince.Bruttium,
+            SousProvince.Apulia,
+            SousProvince.Lucania,
+            SousProvince.Sabinum,
+            SousProvince.Samnium,
+        ];
+        case Province.africa : return [];
+        case Province.aegyptus : return [
+            // TODO
+        ];
     }
     return [];
 }

@@ -1,4 +1,4 @@
 export enum Pays {
-    empire = 'empire',
-    bretonnie = 'Bretonnie'
+    empire = 'Empire romain',
+    parthe = 'Empire Parthe'
 }
