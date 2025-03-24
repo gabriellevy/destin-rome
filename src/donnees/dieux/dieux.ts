@@ -4,35 +4,57 @@ export function dieuAleatoire(): Dieu {
     return dieux[Math.floor(Math.random() * dieux.length)];
 }
 
+// TODO : ajouter les autres dieux ? Classer en plusieurs "niveaux" ? cf Imperator p160
+// + description
+// + dieux non romains ?
+
 export const dieux: Dieu[] = [
     {
-        id: "Manann"
+        id: "Apollon"
     },
     {
-        id: "Morr"
+        id: "Bacchus"
     },
     {
-        id: "Myrmidia"
+        id: "Cérès"
     },
     {
-        id: "Ranald"
+        id: "Diane"
     },
     {
-        id: "Rhya"
+        id: "Janus"
     },
     {
-        id: "Shallya"
+        id: "Junon"
     },
     {
-        id: "Sigmar"
+        id: "Jupiter"
     },
     {
-        id: "Taal"
+        id: "Mars"
     },
     {
-        id: "Ulric"
+        id: "Minerve"
     },
     {
-        id: "Verena"
+        id: "Mercure"
+    },
+    {
+        id: "Neptune"
+    },
+    {
+        id: "Pluton"
+    },
+    {
+        id: "Saturne"
+    },
+    {
+        id: "Vénus"
+    },
+    {
+        id: "Vesta"
+    },
+    {
+        id: "Vulcain"
     },
 ]
