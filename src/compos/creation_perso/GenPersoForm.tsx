@@ -23,7 +23,12 @@ import {PersoContexte, PersoContexteType} from "../../contexte/ContexteTypes.ts"
 import {Ville} from "../../donnees/geographie/villes.ts";
 import {vaA} from "../../types/lieux/Lieu.ts";
 import {getRandomEnumValue, getRandomInt, randomStatut} from "../../fonctions/random.ts";
-import {EMPIRE_NOMS, EMPIRE_PRENOMS_F, EMPIRE_PRENOMS_M} from "../../donnees/noms/humains/empire.ts";
+import {
+    EMPIRE_NOMS_F,
+    EMPIRE_NOMS_M1, EMPIRE_NOMS_M2,
+    EMPIRE_PRENOMS_F,
+    EMPIRE_PRENOMS_M
+} from "../../donnees/noms/humains/empire.ts";
 import { Mistral } from '@mistralai/mistralai';
 
 interface CharacterFormProps {
@@ -63,7 +68,9 @@ export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
         persoAl.prenom = persoAl.sexe ?
             EMPIRE_PRENOMS_M[getRandomInt(EMPIRE_PRENOMS_M.length)] :
             EMPIRE_PRENOMS_F[getRandomInt(EMPIRE_PRENOMS_F.length)];
-        persoAl.nom = EMPIRE_NOMS[getRandomInt(EMPIRE_NOMS.length)];
+        persoAl.nom = persoAl.sexe ?
+            EMPIRE_NOMS_M1[getRandomInt(EMPIRE_NOMS_M1.length)] + " " + EMPIRE_NOMS_M2[getRandomInt(EMPIRE_NOMS_M2.length)] :
+            EMPIRE_NOMS_F[getRandomInt(EMPIRE_NOMS_F.length)];
 
         reset({...persoAl});
         setAfficherForm(true);
@@ -132,7 +139,7 @@ export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
                                 render={({ field }) => (
                                     <TextField
                                         {...field}
-                                        label="Nom"
+                                        label="Prénom"
                                         margin="normal"
                                         fullWidth
                                     />
