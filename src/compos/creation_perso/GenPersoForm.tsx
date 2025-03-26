@@ -25,7 +25,7 @@ import {vaA} from "../../types/lieux/Lieu.ts";
 import {getRandomEnumValue, getRandomInt, randomStatut} from "../../fonctions/random.ts";
 import {
     EMPIRE_NOMS_F,
-    EMPIRE_NOMS_M1, EMPIRE_NOMS_M2,
+    EMPIRE_NOMS_M1, EMPIRE_cognomen_M2,
     EMPIRE_PRENOMS_F,
     EMPIRE_PRENOMS_M
 } from "../../donnees/noms/humains/empire.ts";
@@ -59,8 +59,11 @@ export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
             EMPIRE_PRENOMS_M[getRandomInt(EMPIRE_PRENOMS_M.length)] :
             EMPIRE_PRENOMS_F[getRandomInt(EMPIRE_PRENOMS_F.length)];
         persoAl.nom = persoAl.sexe ?
-            EMPIRE_NOMS_M1[getRandomInt(EMPIRE_NOMS_M1.length)] + " " + EMPIRE_NOMS_M2[getRandomInt(EMPIRE_NOMS_M2.length)] :
+            EMPIRE_NOMS_M1[getRandomInt(EMPIRE_NOMS_M1.length)] :
             EMPIRE_NOMS_F[getRandomInt(EMPIRE_NOMS_F.length)];
+        persoAl.cognomen = persoAl.sexe ?
+            EMPIRE_cognomen_M2[getRandomInt(EMPIRE_cognomen_M2.length)] :
+            '';
 
         reset({...persoAl});
         setAfficherForm(true);
@@ -117,7 +120,7 @@ export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
                 <FormProvider {...methods}>
                     <Typography variant="h4" gutterBottom>Créer un personnage</Typography>
                     <Grid2 container spacing={1} sx={{ mb: 2 }} columns={12}>
-                        <Grid2 size={4}>
+                        <Grid2 size={3}>
                             <Controller
                                 name="prenom"
                                 control={methods.control}
@@ -125,14 +128,14 @@ export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
                                 render={({ field }) => (
                                     <TextField
                                         {...field}
-                                        label="Prénom"
+                                        label="Praenomen"
                                         margin="normal"
                                         fullWidth
                                     />
                                 )}
                             />
                         </Grid2>
-                        <Grid2 size={4}>
+                        <Grid2 size={3}>
                             <Controller
                                 name="nom"
                                 control={methods.control}
@@ -140,14 +143,28 @@ export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
                                 render={({ field }) => (
                                     <TextField
                                         {...field}
-                                        label="Nom"
+                                        label="Nomen"
                                         margin="normal"
                                         fullWidth
                                     />
                                 )}
                             />
                         </Grid2>
-                        <Grid2 size={4}>
+                        <Grid2 size={3}>
+                            <Controller
+                                name="cognomen"
+                                control={methods.control}
+                                render={({ field }) => (
+                                    <TextField
+                                        {...field}
+                                        label="Cognomen"
+                                        margin="normal"
+                                        fullWidth
+                                    />
+                                )}
+                            />
+                        </Grid2>
+                        <Grid2 size={3}>
                             <Controller
                                 name="sexe"
                                 control={methods.control}

@@ -9,8 +9,9 @@ import {Carriere, metiersEnum, metierTest} from "../../types/metiers/metiers.ts"
 import {unAnAvantDebutCampagne} from "../dates/ennemi_interieur.ts";
 
 export const persoVide: Perso = {
-    prenom: "Wilhelm",
-    nom: "Kaburghen",
+    prenom: "Lucius",
+    nom: "Aemilius",
+    cognomen: "Paullus",
     carrieres: new Map<metiersEnum, Carriere>,
     caracs: caracsDeBase(Race.humain),
     date: 0,
@@ -28,8 +29,9 @@ export const persoVide: Perso = {
 }
 
 export const enfant: Perso = {
-    prenom: "Wilhelm",
-    nom: "Kaburghen",
+    prenom: "Lucius",
+    nom: "Aemilius",
+    cognomen: "Paullus",
     sexe: Sexe.male,
     race: Race.humain,
     dateNaissance: anneesToJours(2492), // entre 2482 et 2502 comme ça le perso a entre 10 et 30 ans quand l'ennemi intérieur démarre
@@ -47,8 +49,9 @@ export const enfant: Perso = {
 };
 
 export const jeuneHommeEnVoyageAUbersreik: Perso = {
-    prenom: "Wilhelm",
-    nom: "Kaburghen",
+    prenom: "Lucius",
+    nom: "Aemilius",
+    cognomen: "Paullus",
     sexe: Sexe.male,
     race: Race.humain,
     dateNaissance: anneesToJours(2482), // entre 2482 et 2502 comme ça le perso a entre 10 et 30 ans quand l'ennemi intérieur démarre
@@ -67,8 +70,9 @@ export const jeuneHommeEnVoyageAUbersreik: Perso = {
 
 // époque du carnaval
 export const bourgeoisDAltdorf: Perso = {
-    prenom: "Wilhelm",
-    nom: "Kaburghen",
+    prenom: "Lucius",
+    nom: "Aemilius",
+    cognomen: "Paullus",
     sexe: Sexe.male,
     race: Race.humain,
     dateNaissance: anneesToJours(2491),
@@ -82,25 +86,6 @@ export const bourgeoisDAltdorf: Perso = {
     caracs: caracsDeBase(Race.humain),
     talents: [],
     dieu: {id: "panthéon de l'empire"},
-    evtsProgrammes: evts_programmes,
-    vitesseExecution: 5000,
-    corruption: 0,
-};
-
-export const nainEnVoyageAUbersreik: Perso = {
-    prenom: "Hurfin",
-    nom: "Surmarteau",
-    sexe: Sexe.male,
-    race: Race.nain,
-    dateNaissance: anneesToJours(2018),
-    date: anneesToJours(2502),
-    jourDuMois: -1,
-    lieu: enVoyageEnCampanie,
-    statut: {rang: 2, metalStatut: MetalStatut.argent},
-    carrieres: new Map<metiersEnum, Carriere>,
-    caracs: caracsDeBase(Race.nain),
-    talents: [],
-    dieu: {id: "panthéon nain"},
     evtsProgrammes: evts_programmes,
     vitesseExecution: 5000,
     corruption: 0,

@@ -9,6 +9,7 @@ import {Race} from "../donnees/races/Races.ts";
 export type Perso = {
     prenom: string;
     nom: string;
+    cognomen: string;
     sexe: Sexe;
     dateNaissance: number;
     date: number, // en nombre de jours depuis l'an 0 du calendrier impérial
