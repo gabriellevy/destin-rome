@@ -1,6 +1,5 @@
 import {d10} from "../../fonctions/des.ts";
 import {Perso} from "../Perso.ts";
-import {Race} from "../../donnees/races/Races.ts";
 
 export type Carac = {
     val: number,
@@ -8,109 +7,29 @@ export type Carac = {
     typeCarac: TypeCarac,
 }
 
-export function caracDeDepartAleatoire(carac: TypeCarac, race: Race): number {
+export function caracDeDepartAleatoire(carac: TypeCarac): number {
     let baseValue: number = 20;
     switch(carac) {
-        case TypeCarac.cc : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 30; break;
-                case Race.hobbit: baseValue = 10; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 30; break;
-            }
-        } break;
-        case TypeCarac.ct : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 20; break;
-                case Race.hobbit: baseValue = 30; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 30; break;
-            }
-        } break;
-        case TypeCarac.f : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 20; break;
-                case Race.hobbit: baseValue = 10; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 20; break;
-            }
-        } break;
-        case TypeCarac.e : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 30; break;
-                case Race.hobbit: baseValue = 20; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 20; break;
-            }
-        } break;
-        case TypeCarac.i : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 20; break;
-                case Race.hobbit: baseValue = 20; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 40; break;
-            }
-        } break;
-        case TypeCarac.ag : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 10; break;
-                case Race.hobbit: baseValue = 20; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 30; break;
-            }
-        } break;
-        case TypeCarac.dex : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 30; break;
-                case Race.hobbit: baseValue = 30; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 30; break;
-            }
-        } break;
-        case TypeCarac.int : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 20; break;
-                case Race.hobbit: baseValue = 20; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 30; break;
-            }
-        } break;
-        case TypeCarac.fm : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 40; break;
-                case Race.hobbit: baseValue = 30; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 30; break;
-            }
-        } break;
-        case TypeCarac.soc : {
-            switch (race) {
-                case Race.humain: baseValue = 20; break;
-                case Race.nain: baseValue = 10; break;
-                case Race.hobbit: baseValue = 30; break;
-                case Race.elfe_sylvain:
-                case Race.haut_elfe:
-                    baseValue = 20; break;
-            }
-        } break;
+        case TypeCarac.cc :
+            baseValue = 20; break;
+        case TypeCarac.ct :
+            baseValue = 20; break;
+        case TypeCarac.f :
+            baseValue = 20; break;
+        case TypeCarac.e :
+            baseValue = 20; break;
+        case TypeCarac.i :
+            baseValue = 20; break;
+        case TypeCarac.ag :
+            baseValue = 20; break;
+        case TypeCarac.dex :
+            baseValue = 20; break;
+        case TypeCarac.int :
+            baseValue = 20; break;
+        case TypeCarac.fm :
+            baseValue = 20; break;
+        case TypeCarac.soc :
+            baseValue = 20; break;
     }
     return baseValue + d10() + d10();
 }
@@ -166,54 +85,54 @@ export function augmenterNbDeTestsFaitsCarac(perso: Perso, typeCarac: TypeCarac)
     return texte;
 }
 
-export const caracsDeBase = (race: Race) => [
+export const caracsDeBase = () => [
     {
-        val: caracDeDepartAleatoire(TypeCarac.cc, race),
+        val: caracDeDepartAleatoire(TypeCarac.cc),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.cc,
     },
     {
-        val: caracDeDepartAleatoire(TypeCarac.ct, race),
+        val: caracDeDepartAleatoire(TypeCarac.ct),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.ct,
     },
     {
-        val: caracDeDepartAleatoire(TypeCarac.f, race),
+        val: caracDeDepartAleatoire(TypeCarac.f),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.f,
     },
     {
-        val: caracDeDepartAleatoire(TypeCarac.e, race),
+        val: caracDeDepartAleatoire(TypeCarac.e),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.e,
     },
     {
-        val: caracDeDepartAleatoire(TypeCarac.i, race),
+        val: caracDeDepartAleatoire(TypeCarac.i),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.i,
     },
     {
-        val: caracDeDepartAleatoire(TypeCarac.ag, race),
+        val: caracDeDepartAleatoire(TypeCarac.ag),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.ag,
     },
     {
-        val: caracDeDepartAleatoire(TypeCarac.dex, race),
+        val: caracDeDepartAleatoire(TypeCarac.dex),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.dex,
     },
     {
-        val: caracDeDepartAleatoire(TypeCarac.int, race),
+        val: caracDeDepartAleatoire(TypeCarac.int),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.int,
     },
     {
-        val: caracDeDepartAleatoire(TypeCarac.fm, race),
+        val: caracDeDepartAleatoire(TypeCarac.fm),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.fm,
     },
     {
-        val: caracDeDepartAleatoire(TypeCarac.soc, race),
+        val: caracDeDepartAleatoire(TypeCarac.soc),
         nbDeTestsFaits: 0,
         typeCarac: TypeCarac.soc,
     },

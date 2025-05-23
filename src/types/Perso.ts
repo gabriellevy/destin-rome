@@ -4,7 +4,6 @@ import {Carriere, metiersEnum} from "./metiers/metiers.ts";
 import {Dieu} from "./Dieu.ts";
 import {Carac} from "./caracs/Caracs.ts";
 import {talents} from "../donnees/talents.ts";
-import {Race} from "../donnees/races/Races.ts";
 
 export type Perso = {
     prenom: string;
@@ -16,7 +15,6 @@ export type Perso = {
     anneeDeDepart?: number, // cette donnée est utilisée pour el formulaire mais inutile ensuite => faire une structure de donnée pour formulaire qui hériterait de celle ci ??
     age?: number, // cette donnée est utilisée pour el formulaire mais inutile ensuite => faire une structure de donnée pour formulaire qui hériterait de celle ci ??
     lieu: Lieu,
-    race: Race,
     // aide à la programmation mais pas à afficher directement :
     mois?: string, // déduit de date mais pratique pour optimiser les calculs de conditions en masse
     jourDuMois: number, // déduit de date mais pratique pour optimiser les calculs de conditions en masse

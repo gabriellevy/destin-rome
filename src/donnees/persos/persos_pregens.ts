@@ -1,4 +1,3 @@
-import {Race} from "../races/Races.ts";
 import {anneesToJours} from "../../types/Date.ts";
 import {enVoyageEnCampanie, lieuRome, lieuParDefaut} from "../../types/lieux/Lieu.ts";
 import {MetalStatut} from "../../types/Statut.ts";
@@ -13,14 +12,13 @@ export const persoVide: Perso = {
     nom: "Aemilius",
     cognomen: "Paullus",
     carrieres: new Map<metiersEnum, Carriere>,
-    caracs: caracsDeBase(Race.humain),
+    caracs: caracsDeBase(),
     date: 0,
     dateNaissance: 0,
     dieu: {id: "panthéon de l'empire"},
     evtsProgrammes: evts_programmes,
     jourDuMois: 0,
     lieu: lieuParDefaut,
-    race: Race.humain,
     sexe: Sexe.male,
     statut: {rang: 4, metalStatut: MetalStatut.bronze},
     talents: [],
@@ -33,14 +31,13 @@ export const enfant: Perso = {
     nom: "Aemilius",
     cognomen: "Paullus",
     sexe: Sexe.male,
-    race: Race.humain,
     dateNaissance: anneesToJours(2492), // entre 2482 et 2502 comme ça le perso a entre 10 et 30 ans quand l'ennemi intérieur démarre
     date: anneesToJours(2502)-2, // pas laisser trop de liberté au joueur là dessus
     jourDuMois: -1,
     lieu: lieuParDefaut,
     statut: {rang: 4, metalStatut: MetalStatut.bronze},
     carrieres: new Map<metiersEnum, Carriere>,
-    caracs: caracsDeBase(Race.humain),
+    caracs: caracsDeBase(),
     talents: [],
     dieu: {id: "panthéon de l'empire"},
     evtsProgrammes: evts_programmes,
@@ -53,14 +50,13 @@ export const jeuneHommeEnVoyageAUbersreik: Perso = {
     nom: "Aemilius",
     cognomen: "Paullus",
     sexe: Sexe.male,
-    race: Race.humain,
     dateNaissance: anneesToJours(2482), // entre 2482 et 2502 comme ça le perso a entre 10 et 30 ans quand l'ennemi intérieur démarre
     date: anneesToJours(2502), // pas laisser trop de liberté au joueur là dessus
     jourDuMois: -1,
     lieu: enVoyageEnCampanie,
     statut: {rang: 2, metalStatut: MetalStatut.argent},
     carrieres: new Map<metiersEnum, Carriere>,
-    caracs: caracsDeBase(Race.humain),
+    caracs: caracsDeBase(),
     talents: [],
     dieu: {id: "panthéon de l'empire"},
     evtsProgrammes: evts_programmes,
@@ -74,7 +70,6 @@ export const bourgeoisDAltdorf: Perso = {
     nom: "Aemilius",
     cognomen: "Paullus",
     sexe: Sexe.male,
-    race: Race.humain,
     dateNaissance: anneesToJours(2491),
     date: unAnAvantDebutCampagne, // début du pouvoir derrière le trône 3ème volume
     anneeDeDepart: 2511,
@@ -83,7 +78,7 @@ export const bourgeoisDAltdorf: Perso = {
     lieu: lieuRome,
     statut: {rang: 1, metalStatut: MetalStatut.argent},
     carrieres: new Map<metiersEnum, Carriere>([[metiersEnum.bourgmestre, metierTest]]),
-    caracs: caracsDeBase(Race.humain),
+    caracs: caracsDeBase(),
     talents: [],
     dieu: {id: "panthéon de l'empire"},
     evtsProgrammes: evts_programmes,

@@ -15,7 +15,7 @@ export default function SelectionDates() {
                     render={({ field }) => (
                         <TextField
                             {...field}
-                            label="Année (depuis l'an 0 du calendrier impérial)"
+                            label="Année (depuis l'an 1 du calendrier romain)"
                             type="number"
                             fullWidth
                             margin="normal"
