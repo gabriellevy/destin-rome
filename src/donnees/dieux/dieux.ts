@@ -7,54 +7,70 @@ export function dieuAleatoire(): Dieu {
 // TODO : ajouter les autres dieux ? Classer en plusieurs "niveaux" ? cf Imperator p160
 // + description
 // + dieux non romains ?
+export const APOLLON:string = "Apollon";
+export const BACCHUS:string = "Bacchus";
+export const CERES:string = "Cérès";
+export const DIANE:string = "Diane";
+export const JANUS:string = "Janus";
+export const JUNON:string = "Junon";
+export const JUPITER:string = "Jupiter";
+export const MARS:string = "Mars";
+export const MINERVE:string = "Minerve";
+export const MERCURE:string = "Mercure";
+export const NEPTUNE:string = "Neptune";
+export const PLUTON:string = "Pluton";
+export const SATURNE:string = "Saturne";
+export const VENUS:string = "Vénus";
+export const VESTA:string = "Vesta";
+export const VULCAIN:string = "Vulcain";
 
 export const dieux: Dieu[] = [
     {
-        id: "Apollon"
+        id: APOLLON
     },
     {
-        id: "Bacchus"
+        id: BACCHUS
     },
     {
-        id: "Cérès"
+        id: CERES
     },
     {
-        id: "Diane"
+        id: DIANE
     },
     {
-        id: "Janus"
+        id: JANUS
     },
     {
-        id: "Junon"
+        id: JUNON
     },
     {
-        id: "Jupiter"
+        id: JUPITER
     },
     {
-        id: "Mars"
+        id: MARS
     },
     {
-        id: "Minerve"
+        id: MINERVE
     },
     {
-        id: "Mercure"
+        id: MERCURE
     },
     {
-        id: "Neptune"
+        id: NEPTUNE
     },
     {
-        id: "Pluton"
+        id: PLUTON
     },
     {
-        id: "Saturne"
+        id: SATURNE
     },
     {
-        id: "Vénus"
+        id: VENUS
     },
     {
-        id: "Vesta"
+        id: VESTA
     },
     {
-        id: "Vulcain"
+        id: VULCAIN
     },
 ]

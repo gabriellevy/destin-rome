@@ -6,6 +6,7 @@ import {caracsDeBase} from "../../types/caracs/Caracs.ts";
 import {evts_programmes} from "../evts/evts_programmes.ts";
 import {Carriere, metiersEnum, metierTest} from "../../types/metiers/metiers.ts";
 import {unAnAvantDebutCampagne} from "../dates/ennemi_interieur.ts";
+import {APOLLON} from "../dieux/dieux.ts";
 
 export const persoVide: Perso = {
     prenom: "Lucius",
@@ -15,7 +16,7 @@ export const persoVide: Perso = {
     caracs: caracsDeBase(),
     date: 0,
     dateNaissance: 0,
-    dieu: {id: "panthéon de l'empire"},
+    dieu: {id: APOLLON},
     evtsProgrammes: evts_programmes,
     jourDuMois: 0,
     lieu: lieuParDefaut,
@@ -39,7 +40,7 @@ export const enfant: Perso = {
     carrieres: new Map<metiersEnum, Carriere>,
     caracs: caracsDeBase(),
     talents: [],
-    dieu: {id: "panthéon de l'empire"},
+    dieu: {id: APOLLON},
     evtsProgrammes: evts_programmes,
     vitesseExecution: 5000,
     corruption: 0,
@@ -58,7 +59,7 @@ export const jeuneHommeEnVoyageAUbersreik: Perso = {
     carrieres: new Map<metiersEnum, Carriere>,
     caracs: caracsDeBase(),
     talents: [],
-    dieu: {id: "panthéon de l'empire"},
+    dieu: {id: APOLLON},
     evtsProgrammes: evts_programmes,
     vitesseExecution: 5000,
     corruption: 0,
@@ -80,7 +81,7 @@ export const bourgeoisDAltdorf: Perso = {
     carrieres: new Map<metiersEnum, Carriere>([[metiersEnum.bourgmestre, metierTest]]),
     caracs: caracsDeBase(),
     talents: [],
-    dieu: {id: "panthéon de l'empire"},
+    dieu: {id: APOLLON},
     evtsProgrammes: evts_programmes,
     vitesseExecution: 5000,
     corruption: 0,
