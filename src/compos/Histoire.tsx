@@ -3,9 +3,7 @@ import {Evt, EvtExecute, filtrerEtPreparerEvts} from "../types/Evt.ts";
 import {jourStr, leTempsPasse} from "../types/Date.ts";
 import {evts_calendrier} from "../donnees/evts/evts_calendrier.ts";
 import {evts_dunkelbild} from "../donnees/evts/lieux/evts_dunkelbild.ts";
-import {evts_wissenland} from "../donnees/evts/lieux/evts_wissenland.ts";
 import {evts_altdorf} from "../donnees/evts/lieux/reikland/evts_altdorf.ts";
-import {evts_ostermark} from "../donnees/evts/lieux/evts_ostermark.ts";
 import {evts_crime} from "../donnees/evts/carrieres/evts_crime.ts";
 import {evts_pretres} from "../donnees/evts/carrieres/evts_pretres.ts";
 import {evts_ubersreik_nains} from "../donnees/evts/lieux/reikland/ubersreik/evts_ubersreik_nains.ts";
@@ -87,9 +85,7 @@ export default function Histoire() {
             ...filtrerEtPreparerEvts(evts_ubersreik_nains, perso),
             ...filtrerEtPreparerEvts(evts_calendrier, perso),
             ...filtrerEtPreparerEvts(evts_dunkelbild, perso),
-            ...filtrerEtPreparerEvts(evts_wissenland, perso),
             ...filtrerEtPreparerEvts(evts_altdorf, perso),
-            ...filtrerEtPreparerEvts(evts_ostermark, perso),
             ...filtrerEtPreparerEvts(evts_crime, perso),
             ...filtrerEtPreparerEvts(evts_pretres, perso),
             ...filtrerEtPreparerEvts(evts_ingenieur, perso),
