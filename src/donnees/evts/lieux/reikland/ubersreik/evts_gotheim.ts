@@ -49,7 +49,7 @@ export const evts_gotheim: GroupeEvts = {
                         }
                         aAgit = true;
                     } break;
-                    case metiersEnum.bourgmestre: {
+                    case metiersEnum.edile: {
                         texte +="Une terreur vous frappe et vous empêche de penser correctement, vous restez caché jusqu'au petit matin. ";
                         texte += "Le village est maintenant calme mais vous êtes encore terrifié. Vous vous levez et allez vous réfugier au seul endroit où vous vous sentez bien, à l'auberge de la reine rouge."
                             + "Vous êtes alors pris de folie et hurlez que le seul moyen de tout résoudre c'est de sauter du toit de l'auberge comme vous l'aviez fait lors de l'incendie il y a 5 ans."
@@ -204,7 +204,7 @@ export const evts_gotheim: GroupeEvts = {
 
                 return texte;
             },
-            conditions: (perso: Perso): boolean => perso.lieu.ville === Ville.gotheim,
+            conditions: (perso: Perso): boolean => perso.lieu.ville === Ville.Croton,
             image: "https://raw.githubusercontent.com/gabriellevy/destin-react/refs/heads/main/images/monstres/Jabberslythe.webp"
         },
     ],

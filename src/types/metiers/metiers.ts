@@ -1,13 +1,14 @@
 import {MetalStatut, Statut} from "../Statut.ts";
 import {Perso} from "../Perso.ts";
 import {titreGuildeEnum} from "./Guilde.ts";
+import {Ville} from "../../donnees/geographie/villes.ts";
 
 export enum metiersEnum {
     pamphletaire = "Pamphlétaire",
     maitre_de_guilde = "Maître de guilde",
     serveur = "Serveur",
     macon = "Maçon",
-    bourgmestre = "Bourgmestre",
+    edile = "Édile",
     ranconneur = "Rançonneur",
     novice = "Moine novice",
     moine = "Moine",
@@ -148,10 +149,10 @@ export const metiersObjs: MetierObj = {
         statut: {rang: 2, metalStatut: MetalStatut.bronze},
         statutMax: {rang: 2, metalStatut: MetalStatut.argent},
     },
-    [metiersEnum.bourgmestre] : {
-        nom: metiersEnum.bourgmestre,
+    [metiersEnum.edile] : {
+        nom: metiersEnum.edile,
         intitule: (_perso: Perso, carriere: Carriere) => {
-            return metiersEnum.bourgmestre + " à " + carriere?.groupeLieu;
+            return metiersEnum.edile + " à " + carriere?.groupeLieu;
         },
         statut: {rang: 4, metalStatut: MetalStatut.argent},
         statutMax: {rang: 1, metalStatut: MetalStatut.or},
@@ -217,8 +218,8 @@ export const serveurDebutant: Carriere = {
 };
 
 export const metierTest: Carriere = {
-    metier: metiersObjs[metiersEnum.bourgmestre],
-    groupeLieu: undefined,
+    metier: metiersObjs[metiersEnum.edile],
+    groupeLieu: Ville.rome,
     duree: 0,
     competence: 1,
     actif: true,

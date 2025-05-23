@@ -78,7 +78,7 @@ export const richeDeRome: Perso = {
     jourDuMois: -1,
     lieu: lieuRome,
     statut: {rang: 1, metalStatut: MetalStatut.argent},
-    carrieres: new Map<metiersEnum, Carriere>([[metiersEnum.bourgmestre, metierTest]]),
+    carrieres: new Map<metiersEnum, Carriere>([[metiersEnum.edile, metierTest]]),
     caracs: caracsDeBase(),
     talents: [],
     dieu: {id: APOLLON},

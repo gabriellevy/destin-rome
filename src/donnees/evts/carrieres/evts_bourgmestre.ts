@@ -12,9 +12,9 @@ import {tailleVille} from "../../geographie/villes.ts";
 export const evts_bourgmestre: GroupeEvts = {
     evts: [
         {
-            id: "evts_bourgmestre1",
+            id: "evts_bourgmestre1", // TODO convertir en vrai édile
             description: (perso: Perso): string => {
-                let texte: string = `Vous sentez qu'avec votre âge, votre expérience et votre respectabilité, vous feriez un excellent bourgmestre. `
+                let texte: string = `Vous sentez qu'avec votre âge, votre expérience et votre respectabilité, vous feriez un excellent édile. `
                 const resTestInt:ResultatTest = testCarac(perso, {carac: TypeCarac.int, bonusMalus: 0});
                 const resTestSoc:ResultatTest = testCarac(perso, {carac: TypeCarac.soc, bonusMalus: 0});
                 texte += resTestInt.resume;
@@ -23,7 +23,7 @@ export const evts_bourgmestre: GroupeEvts = {
                     texte += `Malheureusement vos concitoyens sont d'un autre avis et vous n'êtes pas choisi par les notables de la ville. `;
                 }
                 else {
-                    commencerCarriere(perso, metiersEnum.bourgmestre, perso.lieu.ville);
+                    commencerCarriere(perso, metiersEnum.edile, perso.lieu.ville);
                     texte += `À votre grande joie les notables jugent en effet que vous êtes le meilleur candidat. Vous voilà bourgmestre. `;
                 }
                 return texte;
@@ -38,7 +38,7 @@ export const evts_bourgmestre: GroupeEvts = {
             id: "evts_bourgmestre2",
             description: (perso: Perso): string => {
                 let texte: string = "";
-                const resTestMetier:ResultatTest = testMetier(perso, {metier: metiersEnum.bourgmestre, bonusMalus: 20});
+                const resTestMetier:ResultatTest = testMetier(perso, {metier: metiersEnum.edile, bonusMalus: 20});
                 texte += resTestMetier.resume;
                 if (resTestMetier.reussi) {
                     texte += `Vous administrez efficacement la ville. `;
@@ -49,7 +49,7 @@ export const evts_bourgmestre: GroupeEvts = {
             },
             image: "https://raw.githubusercontent.com/gabriellevy/destin-react/refs/heads/main/images/Wilhelm_Kreigrisch.webp",
             conditions: (perso: Perso): boolean =>
-                travailleEnCeMomentComme(perso, metiersEnum.bourgmestre),
+                travailleEnCeMomentComme(perso, metiersEnum.edile),
         },
     ],
     probaParDefaut: 59999999999,
