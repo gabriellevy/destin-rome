@@ -29,20 +29,21 @@ export const nbJoursDansMois:Record<enumMois, number> = {
     [enumMois.DECEMBER]: 29,
     [enumMois.IANUARIUS]: 29,
     [enumMois.FEBRUARIUS]: 28,
+    // XIII - Mensis intercalaris : 29 jours (uniquement tous les quatre ans). => en théorie mais bon j'ignore
 };
 
 // numéro du jour du dernier jour de chaque mois (sur l'échelle de jours dans une année)
 export const nbJourDuDernierJourDuMois:Record<enumMois, number> = {
-    [enumMois.MARTIUS]: 1,
-    [enumMois.APRILIS]: 33,
-    [enumMois.MAIUS]: 66,
-    [enumMois.SEPTEMBER]: 67,
-    [enumMois.IUNIUS]: 100,
-    [enumMois.QUINTILIS]: 133,
-    [enumMois.SEXTILIS]: 166,
-    [enumMois.OCTOBER]: 167,
-    [enumMois.NOVEMBER]: 200,
-    [enumMois.DECEMBER]: 201,
-    [enumMois.IANUARIUS]: 233,
-    [enumMois.FEBRUARIUS]: 266,
+    [enumMois.MARTIUS]: 31,
+    [enumMois.APRILIS]: 60,
+    [enumMois.MAIUS]: 91,
+    [enumMois.IUNIUS]: 120,
+    [enumMois.QUINTILIS]: 151,
+    [enumMois.SEXTILIS]: 180,
+    [enumMois.SEPTEMBER]: 209,
+    [enumMois.OCTOBER]: 240,
+    [enumMois.NOVEMBER]: 269,
+    [enumMois.DECEMBER]: 298,
+    [enumMois.IANUARIUS]: 327,
+    [enumMois.FEBRUARIUS]: 355,
 };

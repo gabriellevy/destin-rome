@@ -32,8 +32,8 @@ export const enfant: Perso = {
     nom: "Aemilius",
     cognomen: "Paullus",
     sexe: Sexe.male,
-    dateNaissance: anneesToJours(2492), // entre 2482 et 2502 comme ça le perso a entre 10 et 30 ans quand l'ennemi intérieur démarre
-    date: anneesToJours(2502)-2, // pas laisser trop de liberté au joueur là dessus
+    dateNaissance: anneesToJours(478), // un peu avant 490 ab urbe condita cad le début de la 1ère guerre punique
+    date: anneesToJours(490)-2, // pas laisser trop de liberté au joueur là dessus
     jourDuMois: -1,
     lieu: lieuParDefaut,
     statut: {rang: 4, metalStatut: MetalStatut.bronze},
@@ -46,13 +46,13 @@ export const enfant: Perso = {
     corruption: 0,
 };
 
-export const jeuneHommeEnVoyageAUbersreik: Perso = {
+export const jeuneHommeEnVoyageEnCampanie: Perso = {
     prenom: "Lucius",
     nom: "Aemilius",
     cognomen: "Paullus",
     sexe: Sexe.male,
-    dateNaissance: anneesToJours(2482), // entre 2482 et 2502 comme ça le perso a entre 10 et 30 ans quand l'ennemi intérieur démarre
-    date: anneesToJours(2502), // pas laisser trop de liberté au joueur là dessus
+    dateNaissance: anneesToJours(478),
+    date: anneesToJours(490),
     jourDuMois: -1,
     lieu: enVoyageEnCampanie,
     statut: {rang: 2, metalStatut: MetalStatut.argent},
@@ -66,14 +66,14 @@ export const jeuneHommeEnVoyageAUbersreik: Perso = {
 };
 
 // époque du carnaval
-export const bourgeoisDAltdorf: Perso = {
+export const richeDeRome: Perso = {
     prenom: "Lucius",
     nom: "Aemilius",
     cognomen: "Paullus",
     sexe: Sexe.male,
-    dateNaissance: anneesToJours(2491),
+    dateNaissance: anneesToJours(470),
     date: unAnAvantDebutCampagne, // début du pouvoir derrière le trône 3ème volume
-    anneeDeDepart: 2511,
+    anneeDeDepart: 490,
     age: 16,
     jourDuMois: -1,
     lieu: lieuRome,

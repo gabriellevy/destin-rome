@@ -17,7 +17,7 @@ import SelectionStatut from "./SelectionStatut.tsx";
 import SelectionDates from "./SelectionDates.tsx";
 import {anneesToJours} from "../../types/Date.ts";
 import {d2, d400} from "../../fonctions/des.ts";
-import {bourgeoisDAltdorf, persoVide} from "../../donnees/persos/persos_pregens.ts";
+import {richeDeRome, persoVide} from "../../donnees/persos/persos_pregens.ts";
 import {useContext} from "react";
 import {PersoContexte, PersoContexteType} from "../../contexte/ContexteTypes.ts";
 import {Ville} from "../../donnees/geographie/villes.ts";
@@ -37,7 +37,7 @@ interface CharacterFormProps {
 export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
     const { setPerso } = useContext(PersoContexte) as PersoContexteType;
     const methods = useForm<Perso>({
-        defaultValues: bourgeoisDAltdorf
+        defaultValues: richeDeRome
     });
     const { reset } = methods;
 
