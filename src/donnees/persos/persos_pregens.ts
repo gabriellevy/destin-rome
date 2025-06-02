@@ -28,13 +28,15 @@ export const persoVide: Perso = {
 }
 
 export const enfant: Perso = {
-    prenom: "Lucius",
+    prenom: "Caius",
     nom: "Aemilius",
     cognomen: "Paullus",
     sexe: Sexe.male,
     dateNaissance: anneesToJours(478), // un peu avant 490 ab urbe condita cad le début de la 1ère guerre punique
-    date: anneesToJours(490)-2, // pas laisser trop de liberté au joueur là dessus
     jourDuMois: -1,
+    date: unAnAvantDebutCampagne, // début du pouvoir derrière le trône 3ème volume
+    anneeDeDepart: 490,
+    age: 14,
     lieu: lieuParDefaut,
     statut: {rang: 4, metalStatut: MetalStatut.bronze},
     carrieres: new Map<metiersEnum, Carriere>,
