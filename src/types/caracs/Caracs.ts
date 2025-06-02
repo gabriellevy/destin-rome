@@ -7,6 +7,19 @@ export type Carac = {
     typeCarac: TypeCarac,
 }
 
+export enum TypeCarac {
+    cc = "CC",
+    ct = "CT",
+    f = "F",
+    e = "E",
+    i = "I",
+    ag = "Ag",
+    dex = "Dex",
+    int = "Int",
+    fm = "FM",
+    soc = "Soc",
+}
+
 export function caracDeDepartAleatoire(carac: TypeCarac): number {
     let baseValue: number = 20;
     switch(carac) {
@@ -32,19 +45,6 @@ export function caracDeDepartAleatoire(carac: TypeCarac): number {
             baseValue = 20; break;
     }
     return baseValue + d10() + d10();
-}
-
-export enum TypeCarac {
-    cc = "CC",
-    ct = "CT",
-    f = "F",
-    e = "E",
-    i = "I",
-    ag = "Ag",
-    dex = "Dex",
-    int = "Int",
-    fm = "FM",
-    soc = "Soc",
 }
 
 export function getCaracValue(perso: Perso, typeCarac: TypeCarac): number {
