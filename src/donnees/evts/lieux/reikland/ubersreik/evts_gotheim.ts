@@ -142,7 +142,7 @@ export const evts_gotheim: GroupeEvts = {
                             texte += "N'écoutant que votre courage vous vous précipitez au temple avec votre arme et tombez face à une mêlée confuse dans les ténèbres avec en son centre un monstre énorme et hideux, une sorte de crapaud génat bousouflé et ailé. "
                             + "Vous vous ruez dans la mêlée.";
                             texte += "Vous parvenez à blesser le monstre et un horrible sang violet jaillit de la blessure. ";
-                            const resTestCc: ResultatTest = testComp(perso, {comp: TypeCompetence.cc, bonusMalus: -20});
+                            const resTestCc: ResultatTest = testComp(perso, {comp: TypeCompetence.armeCaC, bonusMalus: -20});
                             if (resTestCc.reussi) {
                                 texte += "Il ouvre grand la gueule et arrache la tête d'un villageois qui se tenait à vos côtés. "
                                 + "Surmontant votre dégoût et votre colère vous redoublez de courage et la créature finit par s'envoler maladroitement et s'enfuir ! ";

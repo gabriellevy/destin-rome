@@ -8,7 +8,8 @@ export type Competence = {
 }
 
 export enum TypeCompetence {
-    cc = "CC",
+    bagarre = "Bagarre",
+    armeCaC = "Armes de corps à corps",
     ct = "CT",
     f = "F",
     e = "E",
@@ -20,31 +21,8 @@ export enum TypeCompetence {
     soc = "Soc",
 }
 
-export function compDeDepartAleatoire(comp: TypeCompetence): number {
-    let baseValue: number = 20;
-    switch(comp) {
-        case TypeCompetence.cc :
-            baseValue = 20; break;
-        case TypeCompetence.ct :
-            baseValue = 20; break;
-        case TypeCompetence.f :
-            baseValue = 20; break;
-        case TypeCompetence.e :
-            baseValue = 20; break;
-        case TypeCompetence.i :
-            baseValue = 20; break;
-        case TypeCompetence.ag :
-            baseValue = 20; break;
-        case TypeCompetence.dex :
-            baseValue = 20; break;
-        case TypeCompetence.int :
-            baseValue = 20; break;
-        case TypeCompetence.fm :
-            baseValue = 20; break;
-        case TypeCompetence.soc :
-            baseValue = 20; break;
-    }
-    return baseValue + d10() + d10();
+export function compDeDepartAleatoire(): number {
+    return 20 + d10() + d10();
 }
 
 export function getCompValue(perso: Perso, typeComp: TypeCompetence): number {
@@ -87,52 +65,57 @@ export function augmenterNbDeTestsFaitsComp(perso: Perso, typeComp: TypeCompeten
 
 export const compsDeBase = () => [
     {
-        val: compDeDepartAleatoire(TypeCompetence.cc),
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.cc,
+        typeComp: TypeCompetence.bagarre,
     },
     {
-        val: compDeDepartAleatoire(TypeCompetence.ct),
+        val: compDeDepartAleatoire(),
+        nbDeTestsFaits: 0,
+        typeComp: TypeCompetence.armeCaC,
+    },
+    {
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
         typeComp: TypeCompetence.ct,
     },
     {
-        val: compDeDepartAleatoire(TypeCompetence.f),
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
         typeComp: TypeCompetence.f,
     },
     {
-        val: compDeDepartAleatoire(TypeCompetence.e),
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
         typeComp: TypeCompetence.e,
     },
     {
-        val: compDeDepartAleatoire(TypeCompetence.i),
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
         typeComp: TypeCompetence.i,
     },
     {
-        val: compDeDepartAleatoire(TypeCompetence.ag),
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
         typeComp: TypeCompetence.ag,
     },
     {
-        val: compDeDepartAleatoire(TypeCompetence.dex),
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
         typeComp: TypeCompetence.dex,
     },
     {
-        val: compDeDepartAleatoire(TypeCompetence.int),
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
         typeComp: TypeCompetence.int,
     },
     {
-        val: compDeDepartAleatoire(TypeCompetence.fm),
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
         typeComp: TypeCompetence.fm,
     },
     {
-        val: compDeDepartAleatoire(TypeCompetence.soc),
+        val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
         typeComp: TypeCompetence.soc,
     },

@@ -28,7 +28,7 @@ export const evts_crime: GroupeEvts = {
             id: "evts_crime2",
             description: (perso: Perso): string =>  {
                 let texte: string = "";
-                const resTestCC:ResultatTest = testComp(perso, {comp: TypeCompetence.cc, bonusMalus: 0});
+                const resTestCC:ResultatTest = testComp(perso, {comp: TypeCompetence.bagarre, bonusMalus: 0});
                 texte += resTestCC.resume;
                 if (resTestCC.reussi) {
                     texte += "Bagarre après bagarre, vous vous faites remarquer dans la bande pour votre efficacité au combat. ";
