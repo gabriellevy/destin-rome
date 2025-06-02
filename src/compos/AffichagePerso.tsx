@@ -5,6 +5,41 @@ import {useContext} from "react";
 import {PersoContexte, PersoContexteType} from "../contexte/ContexteTypes.ts";
 import {Carriere, metiersEnum} from "../types/metiers/metiers.ts";
 import {JOURS_PAR_AN} from "../donnees/dates/calendrier.ts";
+import {Perso} from "../types/Perso.ts";
+
+interface CaracProps {
+    primaryText: string,
+    perso: Perso,
+    competenceType: TypeCompetence,
+}
+
+const Carac = ({primaryText, perso, competenceType}:CaracProps) => {
+    return (
+        <ListItem>
+            <ListItemText
+                primary={
+                    <Typography
+                        component="span"
+                        variant="body1"
+                        style={{ display: 'inline' }}
+                    >
+                        {primaryText}
+                    </Typography>
+                }
+                secondary={
+                    <Typography
+                        component="span"
+                        variant="body2"
+                        color="textSecondary"
+                        style={{ display: 'inline', marginLeft: '10px' }}
+                    >
+                        {getCompValue(perso, competenceType)}
+                    </Typography>
+                }
+            />
+        </ListItem>
+    );
+};
 
 export default function AffichagePerso() {
     const { perso } = useContext(PersoContexte) as PersoContexteType;
@@ -56,28 +91,16 @@ export default function AffichagePerso() {
                 </ListItem>
             </List>
             <List>
-                <ListItem>
-                <ListItemText primary= {
-                    <Typography
-                    component="span"
-                    variant="body1"
-                    style={{ display: 'inline' }}
-                    >
-                        Bagarre
-                    </Typography>
-                }
-                secondary={
-                    <Typography
-                        component="span"
-                        variant="body2"
-                        color="textSecondary"
-                        style={{ display: 'inline', marginLeft: '10px' }}
-                    >
-                        {getCompValue(perso, TypeCompetence.bagarre)}
-                    </Typography>
-                }/>
-                </ListItem>
-                <ListItemText primary="Armes de corps à corps" secondary={getCompValue(perso, TypeCompetence.armeCaC)}/>
+                <Carac
+                    primaryText="Bagarre"
+                    perso={perso}
+                    competenceType={TypeCompetence.bagarre}
+                />
+                <Carac
+                    primaryText="Armes de corps à corps"
+                    perso={perso}
+                    competenceType={TypeCompetence.armeCaC}
+                />
                 <ListItemText primary="CT" secondary={getCompValue(perso, TypeCompetence.ct)}/>
                 <ListItemText primary="F" secondary={getCompValue(perso, TypeCompetence.f)}/>
                 <ListItemText primary="E" secondary={getCompValue(perso, TypeCompetence.e)}/>
