@@ -1,5 +1,5 @@
-import {ResultatTest, TestCarac, TestMetier} from "../types/LancerDe.ts";
-import {augmenterNbDeTestsFaitsCarac, getCaracValue} from "../types/caracs/Caracs.ts";
+import {ResultatTest, TestCompetence, TestMetier} from "../types/LancerDe.ts";
+import {augmenterNbDeTestsFaitsComp, getCompValue} from "../types/comps/Comps.ts";
 import {Perso} from "../types/Perso.ts";
 import {augmenterNbDeTestsFaitsMetier, getCompetenceMetier} from "../types/metiers/metiersUtils.ts";
 
@@ -16,25 +16,25 @@ export function d400(): number {
     return Math.floor(Math.random() * 400) + 1;
 }
 
-export function testCarac(perso: Perso, test: TestCarac): ResultatTest {
-    const caracValue: number = getCaracValue(perso, test.carac);
+export function testComp(perso: Perso, test: TestCompetence): ResultatTest {
+    const compVal: number = getCompValue(perso, test.comp);
     // augmenter tests effectués :
-    const resAugmentation: string = augmenterNbDeTestsFaitsCarac(perso, test.carac);
-    return returnTestResult(resAugmentation, test.carac, caracValue, test.bonusMalus);
+    const resAugmentation: string = augmenterNbDeTestsFaitsComp(perso, test.comp);
+    return returnTestResult(resAugmentation, test.comp, compVal, test.bonusMalus);
 }
 
 export function testMetier(perso: Perso, test: TestMetier): ResultatTest {
-    const caracValue: number = getCompetenceMetier(perso, test.metier);
+    const valComp: number = getCompetenceMetier(perso, test.metier);
     // augmenter tests effectués :
     const resAugmentation: string = augmenterNbDeTestsFaitsMetier(perso, test.metier);
-    return returnTestResult(resAugmentation, test.metier, caracValue, test.bonusMalus);
+    return returnTestResult(resAugmentation, test.metier, valComp, test.bonusMalus);
 }
 
 /**
  *
  * @param resAugmentation
  * @param intituleTestee
- * @param valeurTestee peut être une compétence, une carac, un métier...
+ * @param valeurTestee peut être une compétence, une comp, un métier...
  * @param bonusMalus
  */
 function returnTestResult(resAugmentation: string, intituleTestee:string, valeurTestee: number, bonusMalus: number): ResultatTest {

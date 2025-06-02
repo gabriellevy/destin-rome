@@ -3,8 +3,8 @@ import {metiersEnum} from "../../../types/metiers/metiers.ts";
 import {GroupeEvts} from "../../../types/Evt.ts";
 import {compareStatut, MetalStatut} from "../../../types/Statut.ts";
 import {ResultatTest} from "../../../types/LancerDe.ts";
-import {testCarac} from "../../../fonctions/des.ts";
-import {TypeCarac} from "../../../types/caracs/Caracs.ts";
+import {testComp} from "../../../fonctions/des.ts";
+import {TypeCompetence} from "../../../types/comps/Comps.ts";
 import {
     aUneCarriere,
     commencerCarriere,
@@ -28,7 +28,7 @@ export const evts_crime: GroupeEvts = {
             id: "evts_crime2",
             description: (perso: Perso): string =>  {
                 let texte: string = "";
-                const resTestCC:ResultatTest = testCarac(perso, {carac: TypeCarac.cc, bonusMalus: 0});
+                const resTestCC:ResultatTest = testComp(perso, {comp: TypeCompetence.cc, bonusMalus: 0});
                 texte += resTestCC.resume;
                 if (resTestCC.reussi) {
                     texte += "Bagarre après bagarre, vous vous faites remarquer dans la bande pour votre efficacité au combat. ";

@@ -1,6 +1,6 @@
 import {Box, Button, List, ListItem, ListItemText, Stack, Typography} from '@mui/material';
 import {age, joursToAnnees} from "../types/Date.ts";
-import {getCaracValue, TypeCarac} from "../types/caracs/Caracs.ts";
+import {getCompValue, TypeCompetence} from "../types/comps/Comps.ts";
 import {useContext} from "react";
 import {PersoContexte, PersoContexteType} from "../contexte/ContexteTypes.ts";
 import {Carriere, metiersEnum} from "../types/metiers/metiers.ts";
@@ -55,17 +55,17 @@ export default function AffichagePerso() {
                     <ListItemText primary="Talents" secondary={perso.talents.join(', ')}/>
                 </ListItem>
             </List>
-            <Stack direction="row" spacing={0}>
-                <ListItemText primary="CC" secondary={getCaracValue(perso, TypeCarac.cc)}/>
-                <ListItemText primary="CT" secondary={getCaracValue(perso, TypeCarac.ct)}/>
-                <ListItemText primary="F" secondary={getCaracValue(perso, TypeCarac.f)}/>
-                <ListItemText primary="E" secondary={getCaracValue(perso, TypeCarac.e)}/>
-                <ListItemText primary="I" secondary={getCaracValue(perso, TypeCarac.i)}/>
-                <ListItemText primary="Ag" secondary={getCaracValue(perso, TypeCarac.ag)}/>
-                <ListItemText primary="Dex" secondary={getCaracValue(perso, TypeCarac.dex)}/>
-                <ListItemText primary="Int" secondary={getCaracValue(perso, TypeCarac.int)}/>
-                <ListItemText primary="FM" secondary={getCaracValue(perso, TypeCarac.fm)}/>
-                <ListItemText primary="Soc" secondary={getCaracValue(perso, TypeCarac.soc)}/>
+            <Stack spacing={0}>
+                <ListItemText primary="CC" secondary={getCompValue(perso, TypeCompetence.cc)}/>
+                <ListItemText primary="CT" secondary={getCompValue(perso, TypeCompetence.ct)}/>
+                <ListItemText primary="F" secondary={getCompValue(perso, TypeCompetence.f)}/>
+                <ListItemText primary="E" secondary={getCompValue(perso, TypeCompetence.e)}/>
+                <ListItemText primary="I" secondary={getCompValue(perso, TypeCompetence.i)}/>
+                <ListItemText primary="Ag" secondary={getCompValue(perso, TypeCompetence.ag)}/>
+                <ListItemText primary="Dex" secondary={getCompValue(perso, TypeCompetence.dex)}/>
+                <ListItemText primary="Int" secondary={getCompValue(perso, TypeCompetence.int)}/>
+                <ListItemText primary="FM" secondary={getCompValue(perso, TypeCompetence.fm)}/>
+                <ListItemText primary="Soc" secondary={getCompValue(perso, TypeCompetence.soc)}/>
             </Stack>
             {
                 perso.corruption > 0 && (

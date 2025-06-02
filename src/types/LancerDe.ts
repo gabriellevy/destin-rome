@@ -1,4 +1,4 @@
-import {TypeCarac} from "./caracs/Caracs.ts";
+import {TypeCompetence} from "./comps/Comps.ts";
 import {metiersEnum} from "./metiers/metiers.ts";
 
 export type ResultatTest = {
@@ -7,8 +7,8 @@ export type ResultatTest = {
     resume: string,
 }
 
-export type TestCarac = {
-    carac: TypeCarac,
+export type TestCompetence = {
+    comp: TypeCompetence,
     bonusMalus: number,
 }
 

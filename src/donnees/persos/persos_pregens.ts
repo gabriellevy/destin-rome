@@ -2,7 +2,7 @@ import {anneesToJours} from "../../types/Date.ts";
 import {enVoyageEnCampanie, lieuRome, lieuParDefaut} from "../../types/lieux/Lieu.ts";
 import {MetalStatut} from "../../types/Statut.ts";
 import {Perso, Sexe} from "../../types/Perso.ts";
-import {caracsDeBase} from "../../types/caracs/Caracs.ts";
+import {compsDeBase} from "../../types/comps/Comps.ts";
 import {evts_programmes} from "../evts/evts_programmes.ts";
 import {Carriere, metiersEnum, metierTest} from "../../types/metiers/metiers.ts";
 import {unAnAvantDebutCampagne} from "../dates/ennemi_interieur.ts";
@@ -13,7 +13,7 @@ export const persoVide: Perso = {
     nom: "Aemilius",
     cognomen: "Paullus",
     carrieres: new Map<metiersEnum, Carriere>,
-    caracs: caracsDeBase(),
+    comps: compsDeBase(),
     date: 0,
     dateNaissance: 0,
     dieu: {id: APOLLON},
@@ -40,7 +40,7 @@ export const enfant: Perso = {
     lieu: lieuParDefaut,
     statut: {rang: 4, metalStatut: MetalStatut.bronze},
     carrieres: new Map<metiersEnum, Carriere>,
-    caracs: caracsDeBase(),
+    comps: compsDeBase(),
     talents: [],
     dieu: {id: APOLLON},
     evtsProgrammes: evts_programmes,
@@ -59,7 +59,7 @@ export const jeuneHommeEnVoyageEnCampanie: Perso = {
     lieu: enVoyageEnCampanie,
     statut: {rang: 2, metalStatut: MetalStatut.argent},
     carrieres: new Map<metiersEnum, Carriere>,
-    caracs: caracsDeBase(),
+    comps: compsDeBase(),
     talents: [],
     dieu: {id: APOLLON},
     evtsProgrammes: evts_programmes,
@@ -81,7 +81,7 @@ export const richeDeRome: Perso = {
     lieu: lieuRome,
     statut: {rang: 1, metalStatut: MetalStatut.argent},
     carrieres: new Map<metiersEnum, Carriere>([[metiersEnum.edile, metierTest]]),
-    caracs: caracsDeBase(),
+    comps: compsDeBase(),
     talents: [],
     dieu: {id: APOLLON},
     evtsProgrammes: evts_programmes,

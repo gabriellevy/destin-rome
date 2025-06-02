@@ -2,8 +2,8 @@ import {Perso} from "../../../types/Perso.ts";
 import {metiersEnum} from "../../../types/metiers/metiers.ts";
 import {GroupeEvts} from "../../../types/Evt.ts";
 import {ResultatTest} from "../../../types/LancerDe.ts";
-import {testCarac, testMetier} from "../../../fonctions/des.ts";
-import {TypeCarac} from "../../../types/caracs/Caracs.ts";
+import {testComp, testMetier} from "../../../fonctions/des.ts";
+import {TypeCompetence} from "../../../types/comps/Comps.ts";
 import {age, anneesToJours} from "../../../types/Date.ts";
 import {aUneCarriere, commencerCarriere, travailleEnCeMomentComme} from "../../../types/metiers/metiersUtils.ts";
 
@@ -27,8 +27,8 @@ export const evts_brasseur: GroupeEvts = {
             id: "evts_brasseur1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous voudriez devenir brasseur. `
-                const resTestDex:ResultatTest = testCarac(perso, {carac: TypeCarac.dex, bonusMalus: 20});
-                const resTestEnd:ResultatTest = testCarac(perso, {carac: TypeCarac.e, bonusMalus: 20});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dex, bonusMalus: 20});
+                const resTestEnd:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus: 20});
                 texte += resTestEnd.resume;
                 texte += resTestDex.resume;
                 if (resTestEnd.reussi && resTestDex.reussi) {

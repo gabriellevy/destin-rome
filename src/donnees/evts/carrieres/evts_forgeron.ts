@@ -2,8 +2,8 @@ import {Perso} from "../../../types/Perso.ts";
 import {metiersEnum} from "../../../types/metiers/metiers.ts";
 import {GroupeEvts} from "../../../types/Evt.ts";
 import {ResultatTest} from "../../../types/LancerDe.ts";
-import {testCarac, testMetier} from "../../../fonctions/des.ts";
-import {TypeCarac} from "../../../types/caracs/Caracs.ts";
+import {testComp, testMetier} from "../../../fonctions/des.ts";
+import {TypeCompetence} from "../../../types/comps/Comps.ts";
 import {age, anneesToJours} from "../../../types/Date.ts";
 import {aUneCarriere, commencerCarriere, travailleEnCeMomentComme} from "../../../types/metiers/metiersUtils.ts";
 
@@ -27,8 +27,8 @@ export const evts_forgeron: GroupeEvts = {
             id: "evts_forgeron1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous voudriez devenir apprenti forgeron. `
-                const resTestFor:ResultatTest = testCarac(perso, {carac: TypeCarac.f, bonusMalus: 20});
-                const resTestDex:ResultatTest = testCarac(perso, {carac: TypeCarac.e, bonusMalus: 20});
+                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus: 20});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus: 20});
                 texte += resTestFor.resume;
                 texte += resTestDex.resume;
                 if (resTestFor.reussi && resTestDex.reussi) {
@@ -49,8 +49,8 @@ export const evts_forgeron: GroupeEvts = {
             id: "evts_forgeron2",
             description: (perso: Perso): string => {
                 let texte: string = "";
-                const resTestFor:ResultatTest = testCarac(perso, {carac: TypeCarac.f, bonusMalus: 20});
-                const resTestDex:ResultatTest = testCarac(perso, {carac: TypeCarac.e, bonusMalus: 20});
+                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus: 20});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus: 20});
                 const resTestMetier:ResultatTest = testMetier(perso, {metier: metiersEnum.forgeron, bonusMalus: 0});
                 texte += resTestMetier.resume;
                 texte += resTestFor.resume;

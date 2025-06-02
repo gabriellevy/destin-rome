@@ -2,8 +2,8 @@ import {Perso} from "../../../types/Perso.ts";
 import {metiersEnum} from "../../../types/metiers/metiers.ts";
 import {GroupeEvts} from "../../../types/Evt.ts";
 import {ResultatTest} from "../../../types/LancerDe.ts";
-import {testCarac, testMetier} from "../../../fonctions/des.ts";
-import {TypeCarac} from "../../../types/caracs/Caracs.ts";
+import {testComp, testMetier} from "../../../fonctions/des.ts";
+import {TypeCompetence} from "../../../types/comps/Comps.ts";
 import {age, anneesToJours} from "../../../types/Date.ts";
 import {aUneCarriere, commencerCarriere, travailleEnCeMomentComme} from "../../../types/metiers/metiersUtils.ts";
 
@@ -27,7 +27,7 @@ export const evts_boucher: GroupeEvts = {
             id: "evts_boucher1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous voudriez devenir boucher. `
-                const resTestDex:ResultatTest = testCarac(perso, {carac: TypeCarac.f, bonusMalus: 0});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus: 0});
                 texte += resTestDex.resume;
                 if (resTestDex.reussi) {
                     commencerCarriere(perso, metiersEnum.apprenti_boucher, '');

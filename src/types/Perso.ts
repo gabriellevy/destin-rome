@@ -2,7 +2,7 @@ import {Lieu} from "./lieux/Lieu.ts";
 import {Statut} from "./Statut.ts";
 import {Carriere, metiersEnum} from "./metiers/metiers.ts";
 import {Dieu} from "./Dieu.ts";
-import {Carac} from "./caracs/Caracs.ts";
+import {Competence} from "./comps/Comps.ts";
 import {talents} from "../donnees/talents.ts";
 
 export type Perso = {
@@ -22,7 +22,7 @@ export type Perso = {
     carrieres: Map<metiersEnum, Carriere>, // TODO : conversion en tableau plutôt : évitera des pb d'export de json etc
     // surtout utile si affilié à un temple (ou très très croyant en un dieu particulier)
     dieu: Dieu,
-    caracs: Carac[],
+    comps: Competence[],
     talents: talents[],
     evtsProgrammes: Map<number, (perso: Perso)=>string> // TODO : conversion en tableau plutôt : évitera des pb d'export de json etc
     vitesseExecution: number, // en millisecondes entre chaque événement

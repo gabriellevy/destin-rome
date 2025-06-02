@@ -3,8 +3,8 @@ import {metiersEnum} from "../../../types/metiers/metiers.ts";
 import {GroupeEvts} from "../../../types/Evt.ts";
 import {compareStatut, MetalStatut} from "../../../types/Statut.ts";
 import {ResultatTest} from "../../../types/LancerDe.ts";
-import {testCarac, testMetier} from "../../../fonctions/des.ts";
-import {TypeCarac} from "../../../types/caracs/Caracs.ts";
+import {testComp, testMetier} from "../../../fonctions/des.ts";
+import {TypeCompetence} from "../../../types/comps/Comps.ts";
 import {anneesToJours} from "../../../types/Date.ts";
 import {aUneCarriere, commencerCarriere, suitUneCarriereDe} from "../../../types/metiers/metiersUtils.ts";
 import {appartientALaGuilde, rejointGuilde} from "../../../types/metiers/Guilde.ts";
@@ -29,8 +29,8 @@ export const evts_ingenieur: GroupeEvts = {
             id: "evts_ingenieur1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous avez la ferme intention de devenir apprenti ingénieur, mais les tests d'entrée sont difficiles. `
-                const resTestInt:ResultatTest = testCarac(perso, {carac: TypeCarac.int, bonusMalus: 20});
-                const resTestDex:ResultatTest = testCarac(perso, {carac: TypeCarac.dex, bonusMalus: 20});
+                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.int, bonusMalus: 20});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dex, bonusMalus: 20});
                 texte += resTestInt.resume;
                 texte += resTestDex.resume;
                 if (resTestInt.reussi && resTestDex.reussi) {
@@ -52,8 +52,8 @@ export const evts_ingenieur: GroupeEvts = {
             id: "evts_ingenieur2",
             description: (perso: Perso): string => {
                 let texte: string = "";
-                const resTestInt:ResultatTest = testCarac(perso, {carac: TypeCarac.int, bonusMalus: 40});
-                const resTestDex:ResultatTest = testCarac(perso, {carac: TypeCarac.dex, bonusMalus: 40});
+                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.int, bonusMalus: 40});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dex, bonusMalus: 40});
                 texte += resTestInt.resume;
                 texte += resTestDex.resume;
                 if (resTestInt.reussi && resTestDex.reussi) {

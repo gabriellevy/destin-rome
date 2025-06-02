@@ -2,8 +2,8 @@ import {Perso} from "../../../types/Perso.ts";
 import {metiersEnum} from "../../../types/metiers/metiers.ts";
 import {GroupeEvts} from "../../../types/Evt.ts";
 import {ResultatTest} from "../../../types/LancerDe.ts";
-import {testCarac, testMetier} from "../../../fonctions/des.ts";
-import {TypeCarac} from "../../../types/caracs/Caracs.ts";
+import {testComp, testMetier} from "../../../fonctions/des.ts";
+import {TypeCompetence} from "../../../types/comps/Comps.ts";
 import {age} from "../../../types/Date.ts";
 import {commencerCarriere, travailleEnCeMomentComme} from "../../../types/metiers/metiersUtils.ts";
 import {compareStatut, MetalStatut} from "../../../types/Statut.ts";
@@ -15,8 +15,8 @@ export const evts_bourgmestre: GroupeEvts = {
             id: "evts_bourgmestre1", // TODO convertir en vrai édile
             description: (perso: Perso): string => {
                 let texte: string = `Vous sentez qu'avec votre âge, votre expérience et votre respectabilité, vous feriez un excellent édile. `
-                const resTestInt:ResultatTest = testCarac(perso, {carac: TypeCarac.int, bonusMalus: 0});
-                const resTestSoc:ResultatTest = testCarac(perso, {carac: TypeCarac.soc, bonusMalus: 0});
+                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.int, bonusMalus: 0});
+                const resTestSoc:ResultatTest = testComp(perso, {comp: TypeCompetence.soc, bonusMalus: 0});
                 texte += resTestInt.resume;
                 texte += resTestSoc.resume;
                 if (!resTestSoc.reussi! && resTestInt.reussi) {

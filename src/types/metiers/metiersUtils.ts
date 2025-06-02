@@ -1,6 +1,6 @@
 import {Carriere, metiersEnum, metiersObjs} from "./metiers.ts";
 import {Perso} from "../Perso.ts";
-import {seuils} from "../caracs/Caracs.ts";
+import {seuils} from "../comps/Comps.ts";
 
 // seulement les carrières actives
 export function aUneCarriere(perso: Perso): boolean {

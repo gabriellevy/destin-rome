@@ -2,8 +2,8 @@ import {Perso} from "../../../types/Perso.ts";
 import {metiersEnum} from "../../../types/metiers/metiers.ts";
 import {GroupeEvts} from "../../../types/Evt.ts";
 import {ResultatTest} from "../../../types/LancerDe.ts";
-import {testCarac, testMetier} from "../../../fonctions/des.ts";
-import {TypeCarac} from "../../../types/caracs/Caracs.ts";
+import {testComp, testMetier} from "../../../fonctions/des.ts";
+import {TypeCompetence} from "../../../types/comps/Comps.ts";
 import {age} from "../../../types/Date.ts";
 import {aUneCarriere, commencerCarriere, travailleEnCeMomentComme} from "../../../types/metiers/metiersUtils.ts";
 
@@ -14,8 +14,8 @@ export const evts_serveur: GroupeEvts = {
             description: (perso: Perso): string => {
                 const taverne: string = "la taverne rouge";
                 let texte: string = `Vous hésitez à devenir serveur et décider de postuler à ${taverne} de Klara Kellner. `
-                const resTestDex:ResultatTest = testCarac(perso, {carac: TypeCarac.dex, bonusMalus: 40});
-                const resTestSoc:ResultatTest = testCarac(perso, {carac: TypeCarac.soc, bonusMalus: 40});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dex, bonusMalus: 40});
+                const resTestSoc:ResultatTest = testComp(perso, {comp: TypeCompetence.soc, bonusMalus: 40});
                 texte += resTestDex.resume;
                 texte += resTestSoc.resume;
                 if (!resTestDex.reussi) {
