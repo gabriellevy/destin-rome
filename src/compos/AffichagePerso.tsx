@@ -52,7 +52,7 @@ export default function AffichagePerso() {
                     })
                 }
                 <ListItem>
-                    <ListItemText primary="Talents" secondary={perso.talents.join(', ')}/>
+                    <ListItemText primary="Maîtrises" secondary={perso.maitrises.join(', ')}/>
                 </ListItem>
             </List>
             <List>
@@ -62,7 +62,9 @@ export default function AffichagePerso() {
                     component="span"
                     variant="body1"
                     style={{ display: 'inline' }}
-                    >"Bagarre"</Typography>
+                    >
+                        Bagarre
+                    </Typography>
                 }
                 secondary={
                     <Typography
@@ -71,7 +73,7 @@ export default function AffichagePerso() {
                         color="textSecondary"
                         style={{ display: 'inline', marginLeft: '10px' }}
                     >
-                        getCompValue(perso, TypeCompetence.bagarre)
+                        {getCompValue(perso, TypeCompetence.bagarre)}
                     </Typography>
                 }/>
                 </ListItem>

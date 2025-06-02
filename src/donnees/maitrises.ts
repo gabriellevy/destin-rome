@@ -7,11 +7,11 @@ et qui déclenchent des événements
 
 import {Perso} from "../types/Perso.ts";
 
-export enum talents {
+export enum maitrises {
     beni = "Béni", // béni par un dieu (celui de perso.dieu), permet d'accomplir des miracles
     natation = "Natation",
 }
 
-export function aLeTalent(perso: Perso, talent: talents): boolean {
-    return perso.talents.find((tal: talents) => tal === talent) !== undefined;
+export function aLaMaitrise(perso: Perso, maitrise: maitrises): boolean {
+    return perso.maitrises.find((tal: maitrises) => tal === maitrise) !== undefined;
 }

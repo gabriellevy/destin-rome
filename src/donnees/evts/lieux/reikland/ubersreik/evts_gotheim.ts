@@ -8,7 +8,7 @@ import {Carriere, metiersEnum} from "../../../../../types/metiers/metiers.ts";
 import {ResultatTest} from "../../../../../types/LancerDe.ts";
 import {testComp} from "../../../../../fonctions/des.ts";
 import {TypeCompetence} from "../../../../../types/comps/Comps.ts";
-import {aLeTalent, talents} from "../../../../talents.ts";
+import {aLaMaitrise, maitrises} from "../../../../maitrises.ts";
 import {testCorruptionMentale, testCorruptionPhysique} from "../../../../../fonctions/corruption.ts";
 
 export const evts_gotheim: GroupeEvts = {
@@ -191,7 +191,7 @@ export const evts_gotheim: GroupeEvts = {
                     + "Les eaux qu'elle contenaient descendent la colline, noient le cercle de pierre et le village tout entier ! ";
                     if (dansLeVillage) {
                         const resTestI: ResultatTest = testComp(perso, {comp: TypeCompetence.i, bonusMalus: 0});
-                        if (resTestI.reussi || aLeTalent(perso, talents.natation)) {
+                        if (resTestI.reussi || aLaMaitrise(perso, maitrises.natation)) {
                             texte += "Vous parvenez à vous mettre à l'abri mais le village est complètement détruit. ";
                         } else {
                             texte += "Vous vous noyez dans la catastrophe. ";

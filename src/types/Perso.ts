@@ -3,7 +3,7 @@ import {Statut} from "./Statut.ts";
 import {Carriere, metiersEnum} from "./metiers/metiers.ts";
 import {Dieu} from "./Dieu.ts";
 import {Competence} from "./comps/Comps.ts";
-import {talents} from "../donnees/talents.ts";
+import {maitrises} from "../donnees/maitrises.ts";
 
 export type Perso = {
     prenom: string;
@@ -23,7 +23,7 @@ export type Perso = {
     // surtout utile si affilié à un temple (ou très très croyant en un dieu particulier)
     dieu: Dieu,
     comps: Competence[],
-    talents: talents[],
+    maitrises: maitrises[],
     evtsProgrammes: Map<number, (perso: Perso)=>string> // TODO : conversion en tableau plutôt : évitera des pb d'export de json etc
     vitesseExecution: number, // en millisecondes entre chaque événement
     mort?: boolean,
