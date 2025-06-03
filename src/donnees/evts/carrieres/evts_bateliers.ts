@@ -14,8 +14,8 @@ export const evts_batelier: GroupeEvts = {
             id: "evts_batelier1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous hésitez à devenir batelier. `
-                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus: 20});
-                const resTestEnd:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus: 20});
+                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.force, bonusMalus: 20});
+                const resTestEnd:ResultatTest = testComp(perso, {comp: TypeCompetence.endurance, bonusMalus: 20});
                 texte += resTestFor.resume;
                 texte += resTestEnd.resume;
                 if (resTestFor.reussi && resTestEnd.reussi) {
@@ -35,8 +35,8 @@ export const evts_batelier: GroupeEvts = {
             id: "evts_batelier2",
             description: (perso: Perso): string => {
                 let texte: string = "";
-                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus: 40});
-                const resTestEnd:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus: 40});
+                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.force, bonusMalus: 40});
+                const resTestEnd:ResultatTest = testComp(perso, {comp: TypeCompetence.endurance, bonusMalus: 40});
                 texte += resTestEnd.resume;
                 texte += resTestEnd.resume;
                 if (resTestFor.reussi && resTestEnd.reussi) {

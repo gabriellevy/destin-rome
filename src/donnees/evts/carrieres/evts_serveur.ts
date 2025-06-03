@@ -14,8 +14,8 @@ export const evts_serveur: GroupeEvts = {
             description: (perso: Perso): string => {
                 const taverne: string = "la taverne rouge";
                 let texte: string = `Vous hésitez à devenir serveur et décider de postuler à ${taverne} de Klara Kellner. `
-                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dex, bonusMalus: 40});
-                const resTestSoc:ResultatTest = testComp(perso, {comp: TypeCompetence.soc, bonusMalus: 40});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dexterite, bonusMalus: 40});
+                const resTestSoc:ResultatTest = testComp(perso, {comp: TypeCompetence.charme, bonusMalus: 40});
                 texte += resTestDex.resume;
                 texte += resTestSoc.resume;
                 if (!resTestDex.reussi) {

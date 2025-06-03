@@ -13,8 +13,8 @@ export const evts_macon: GroupeEvts = {
             id: "evts_macon1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous avez décidé de devenir maçon. `
-                const resTestF:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus: 20});
-                const resTestE:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus: 20});
+                const resTestF:ResultatTest = testComp(perso, {comp: TypeCompetence.force, bonusMalus: 20});
+                const resTestE:ResultatTest = testComp(perso, {comp: TypeCompetence.endurance, bonusMalus: 20});
                 texte += resTestF.resume;
                 texte += resTestE.resume;
                 if (!resTestF.reussi || !resTestE.reussi) {

@@ -27,9 +27,9 @@ export const evts_barbierChirurgien: GroupeEvts = {
             id: "evts_barbierChirurgien1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous voudriez devenir barbier chirurgien. `
-                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.int, bonusMalus: 20});
-                const resTestFm:ResultatTest = testComp(perso, {comp: TypeCompetence.fm, bonusMalus: 20});
-                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dex, bonusMalus: 20});
+                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.intelligence, bonusMalus: 20});
+                const resTestFm:ResultatTest = testComp(perso, {comp: TypeCompetence.volonte, bonusMalus: 20});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dexterite, bonusMalus: 20});
                 texte += resTestInt.resume;
                 texte += resTestFm.resume;
                 texte += resTestDex.resume;

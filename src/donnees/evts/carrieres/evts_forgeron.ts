@@ -27,8 +27,8 @@ export const evts_forgeron: GroupeEvts = {
             id: "evts_forgeron1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous voudriez devenir apprenti forgeron. `
-                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus: 20});
-                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus: 20});
+                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.force, bonusMalus: 20});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.endurance, bonusMalus: 20});
                 texte += resTestFor.resume;
                 texte += resTestDex.resume;
                 if (resTestFor.reussi && resTestDex.reussi) {
@@ -49,8 +49,8 @@ export const evts_forgeron: GroupeEvts = {
             id: "evts_forgeron2",
             description: (perso: Perso): string => {
                 let texte: string = "";
-                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus: 20});
-                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus: 20});
+                const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.force, bonusMalus: 20});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.endurance, bonusMalus: 20});
                 const resTestMetier:ResultatTest = testMetier(perso, {metier: metiersEnum.forgeron, bonusMalus: 0});
                 texte += resTestMetier.resume;
                 texte += resTestFor.resume;

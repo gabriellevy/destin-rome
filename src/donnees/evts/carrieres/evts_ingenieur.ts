@@ -29,8 +29,8 @@ export const evts_ingenieur: GroupeEvts = {
             id: "evts_ingenieur1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous avez la ferme intention de devenir apprenti ingénieur, mais les tests d'entrée sont difficiles. `
-                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.int, bonusMalus: 20});
-                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dex, bonusMalus: 20});
+                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.intelligence, bonusMalus: 20});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dexterite, bonusMalus: 20});
                 texte += resTestInt.resume;
                 texte += resTestDex.resume;
                 if (resTestInt.reussi && resTestDex.reussi) {
@@ -52,8 +52,8 @@ export const evts_ingenieur: GroupeEvts = {
             id: "evts_ingenieur2",
             description: (perso: Perso): string => {
                 let texte: string = "";
-                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.int, bonusMalus: 40});
-                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dex, bonusMalus: 40});
+                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.intelligence, bonusMalus: 40});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dexterite, bonusMalus: 40});
                 texte += resTestInt.resume;
                 texte += resTestDex.resume;
                 if (resTestInt.reussi && resTestDex.reussi) {

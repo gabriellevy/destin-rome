@@ -15,8 +15,8 @@ export const evts_bourgmestre: GroupeEvts = {
             id: "evts_bourgmestre1", // TODO convertir en vrai édile
             description: (perso: Perso): string => {
                 let texte: string = `Vous sentez qu'avec votre âge, votre expérience et votre respectabilité, vous feriez un excellent édile. `
-                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.int, bonusMalus: 0});
-                const resTestSoc:ResultatTest = testComp(perso, {comp: TypeCompetence.soc, bonusMalus: 0});
+                const resTestInt:ResultatTest = testComp(perso, {comp: TypeCompetence.intelligence, bonusMalus: 0});
+                const resTestSoc:ResultatTest = testComp(perso, {comp: TypeCompetence.charme, bonusMalus: 0});
                 texte += resTestInt.resume;
                 texte += resTestSoc.resume;
                 if (!resTestSoc.reussi! && resTestInt.reussi) {

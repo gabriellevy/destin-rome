@@ -15,13 +15,13 @@ interface CaracProps {
 
 const Carac = ({primaryText, perso, competenceType}:CaracProps) => {
     return (
-        <ListItem>
+        <ListItem sx={{padding: '0px'}}>
             <ListItemText
                 primary={
                     <Typography
                         component="span"
                         variant="body1"
-                        style={{ display: 'inline' }}
+                        style={{ display: 'inline', fontSize: '13px' }}
                     >
                         {primaryText}
                     </Typography>
@@ -31,11 +31,12 @@ const Carac = ({primaryText, perso, competenceType}:CaracProps) => {
                         component="span"
                         variant="body2"
                         color="textSecondary"
-                        style={{ display: 'inline', marginLeft: '10px' }}
+                        style={{ display: 'inline', marginLeft: '10px', fontSize: '13px' }}
                     >
                         {getCompValue(perso, competenceType)}
                     </Typography>
                 }
+                sx={{margin: '0px', fontSize: '5px'}}
             />
         </ListItem>
     );
@@ -92,24 +93,60 @@ export default function AffichagePerso() {
             </List>
             <List>
                 <Carac
+                    primaryText="Armes de corps à corps"
+                    perso={perso}
+                    competenceType={TypeCompetence.armeCaC}
+                />
+                <Carac
                     primaryText="Bagarre"
                     perso={perso}
                     competenceType={TypeCompetence.bagarre}
                 />
                 <Carac
-                    primaryText="Armes de corps à corps"
+                    primaryText="Charme"
                     perso={perso}
-                    competenceType={TypeCompetence.armeCaC}
+                    competenceType={TypeCompetence.charme}
                 />
-                <ListItemText primary="CT" secondary={getCompValue(perso, TypeCompetence.ct)}/>
-                <ListItemText primary="F" secondary={getCompValue(perso, TypeCompetence.f)}/>
-                <ListItemText primary="E" secondary={getCompValue(perso, TypeCompetence.e)}/>
-                <ListItemText primary="I" secondary={getCompValue(perso, TypeCompetence.i)}/>
-                <ListItemText primary="Ag" secondary={getCompValue(perso, TypeCompetence.ag)}/>
-                <ListItemText primary="Dex" secondary={getCompValue(perso, TypeCompetence.dex)}/>
-                <ListItemText primary="Int" secondary={getCompValue(perso, TypeCompetence.int)}/>
-                <ListItemText primary="FM" secondary={getCompValue(perso, TypeCompetence.fm)}/>
-                <ListItemText primary="Soc" secondary={getCompValue(perso, TypeCompetence.soc)}/>
+                <Carac
+                    primaryText="Dextérité"
+                    perso={perso}
+                    competenceType={TypeCompetence.dexterite}
+                />
+                <Carac
+                    primaryText="Endurance"
+                    perso={perso}
+                    competenceType={TypeCompetence.endurance}
+                />
+                <Carac
+                    primaryText="Force"
+                    perso={perso}
+                    competenceType={TypeCompetence.force}
+                />
+                <Carac
+                    primaryText="Intelligence"
+                    perso={perso}
+                    competenceType={TypeCompetence.intelligence}
+                />
+                <Carac
+                    primaryText="Mouvement"
+                    perso={perso}
+                    competenceType={TypeCompetence.mouvement}
+                />
+                <Carac
+                    primaryText="Réflexes"
+                    perso={perso}
+                    competenceType={TypeCompetence.reflexes}
+                />
+                <Carac
+                    primaryText="Tir"
+                    perso={perso}
+                    competenceType={TypeCompetence.tir}
+                />
+                <Carac
+                    primaryText="Volonté"
+                    perso={perso}
+                    competenceType={TypeCompetence.volonte}
+                />
             </List>
             {
                 perso.corruption > 0 && (

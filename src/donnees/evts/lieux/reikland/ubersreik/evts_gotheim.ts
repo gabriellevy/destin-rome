@@ -39,7 +39,7 @@ export const evts_gotheim: GroupeEvts = {
                             + "Il s'apprête à sauter ! Vous tentez de l'en empêcher mais il ne veut rien entendre ! "
                         + "Il hurle <i>'Ôtez vos sales pattes de moi ! Laissez moi partir ! C'est la seule façon de s'en sortir ! La seule ! '</i>";
 
-                        const resTest:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus:-10});
+                        const resTest:ResultatTest = testComp(perso, {comp: TypeCompetence.force, bonusMalus:-10});
                         texte += resTest.resume;
                         if (resTest.reussi) {
                             texte += "Vous parvenez à l'attraper par le bras et le maîtriser.";
@@ -57,7 +57,7 @@ export const evts_gotheim: GroupeEvts = {
                             + "La serveuse Klara Kellner tente de vous maîtriser pour vous empêcher de sauter. "
                             + "Vous hurlez <i>'Ôtez vos sales pattes de moi ! Laissez moi partir ! C'est la seule façon de s'en sortir ! La seule ! '</i>";
 
-                        const resTest:ResultatTest = testComp(perso, {comp: TypeCompetence.f, bonusMalus:20});
+                        const resTest:ResultatTest = testComp(perso, {comp: TypeCompetence.force, bonusMalus:20});
                         texte += resTest.resume;
                         if (!resTest.reussi) {
                             texte += "Elle y parvient, et vous maintient solidement jusqu'à ce que vous réalisiez la folie de ce que vous alliez faire. "
@@ -137,7 +137,7 @@ export const evts_gotheim: GroupeEvts = {
                     case metiersEnum.pretre: // TODO : ajouter ici tous les métiers de guerriers (sauf garde et milicien)
                     case metiersEnum.initie_pretre: {
                         texte +="Puis vous entendez des hurlements et des bruits de lutte près du temple de Sigmar. ";
-                        const resTestFm: ResultatTest = testComp(perso, {comp: TypeCompetence.fm, bonusMalus: 20});
+                        const resTestFm: ResultatTest = testComp(perso, {comp: TypeCompetence.volonte, bonusMalus: 20});
                         if (resTestFm.reussi) {
                             texte += "N'écoutant que votre courage vous vous précipitez au temple avec votre arme et tombez face à une mêlée confuse dans les ténèbres avec en son centre un monstre énorme et hideux, une sorte de crapaud génat bousouflé et ailé. "
                             + "Vous vous ruez dans la mêlée.";
@@ -190,7 +190,7 @@ export const evts_gotheim: GroupeEvts = {
                     texte += "La digue est rompue ! "
                     + "Les eaux qu'elle contenaient descendent la colline, noient le cercle de pierre et le village tout entier ! ";
                     if (dansLeVillage) {
-                        const resTestI: ResultatTest = testComp(perso, {comp: TypeCompetence.i, bonusMalus: 0});
+                        const resTestI: ResultatTest = testComp(perso, {comp: TypeCompetence.reflexes, bonusMalus: 0});
                         if (resTestI.reussi || aLaMaitrise(perso, maitrises.natation)) {
                             texte += "Vous parvenez à vous mettre à l'abri mais le village est complètement détruit. ";
                         } else {

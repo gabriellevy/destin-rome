@@ -4,7 +4,7 @@ import {testComp} from "./des.ts";
 import {TypeCompetence} from "../types/comps/Comps.ts";
 
 export function testCorruptionMentale(perso: Perso): ResultatTest {
-    const resTest:ResultatTest = testComp(perso, {comp: TypeCompetence.fm, bonusMalus:0});
+    const resTest:ResultatTest = testComp(perso, {comp: TypeCompetence.volonte, bonusMalus:0});
     if (resTest.reussi) {
         resTest.resume += "Vous résistez à la corruption mentale. <br/>";
     } else {
@@ -19,7 +19,7 @@ export function testCorruptionMentale(perso: Perso): ResultatTest {
 }
 
 export function testCorruptionPhysique(perso: Perso): ResultatTest {
-    const resTest:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus:0});
+    const resTest:ResultatTest = testComp(perso, {comp: TypeCompetence.endurance, bonusMalus:0});
     if (resTest.reussi) {
         resTest.resume += "Vous résistez à la corruption de votre corps. <br/>";
     } else {

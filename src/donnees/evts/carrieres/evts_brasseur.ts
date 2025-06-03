@@ -27,8 +27,8 @@ export const evts_brasseur: GroupeEvts = {
             id: "evts_brasseur1",
             description: (perso: Perso): string => {
                 let texte: string = `Vous voudriez devenir brasseur. `
-                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dex, bonusMalus: 20});
-                const resTestEnd:ResultatTest = testComp(perso, {comp: TypeCompetence.e, bonusMalus: 20});
+                const resTestDex:ResultatTest = testComp(perso, {comp: TypeCompetence.dexterite, bonusMalus: 20});
+                const resTestEnd:ResultatTest = testComp(perso, {comp: TypeCompetence.endurance, bonusMalus: 20});
                 texte += resTestEnd.resume;
                 texte += resTestDex.resume;
                 if (resTestEnd.reussi && resTestDex.reussi) {

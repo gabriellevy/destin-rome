@@ -10,15 +10,15 @@ export type Competence = {
 export enum TypeCompetence {
     bagarre = "Bagarre",
     armeCaC = "Armes de corps à corps",
-    ct = "CT",
-    f = "F",
-    e = "E",
-    i = "I",
-    ag = "Ag",
-    dex = "Dex",
-    int = "Int",
-    fm = "FM",
-    soc = "Soc",
+    tir = "Tir",
+    force = "Force",
+    endurance = "Endurance",
+    reflexes = "Réflexes",
+    mouvement = "Mouvement",
+    dexterite = "Dextérité",
+    intelligence = "Intelligence",
+    volonte = "Volonté",
+    charme = "Charme",
 }
 
 export function compDeDepartAleatoire(): number {
@@ -77,46 +77,46 @@ export const compsDeBase = () => [
     {
         val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.ct,
+        typeComp: TypeCompetence.tir,
     },
     {
         val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.f,
+        typeComp: TypeCompetence.force,
     },
     {
         val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.e,
+        typeComp: TypeCompetence.endurance,
     },
     {
         val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.i,
+        typeComp: TypeCompetence.reflexes,
     },
     {
         val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.ag,
+        typeComp: TypeCompetence.mouvement,
     },
     {
         val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.dex,
+        typeComp: TypeCompetence.dexterite,
     },
     {
         val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.int,
+        typeComp: TypeCompetence.intelligence,
     },
     {
         val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.fm,
+        typeComp: TypeCompetence.volonte,
     },
     {
         val: compDeDepartAleatoire(),
         nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.soc,
+        typeComp: TypeCompetence.charme,
     },
 ];
