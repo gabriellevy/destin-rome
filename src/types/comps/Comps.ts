@@ -16,16 +16,25 @@ export enum TypeCompetence {
     charme = "Charme",
     commandement = "Commandement",
     dexterite = "Dextérité",
+    discours = "Discours",
     discretion = "Discrétion",
     endurance = "Endurance",
     evaluation = "Évaluation",
     force = "Force",
     intelligence = "Intelligence",
     intimidation = "Intimidation",
+    intuition = "Intuition",
+    jeux = "Jeux",
+    marchandage = "Marchandage",
     mouvement = "Mouvement",
+    orientation = "Orientation",
     perception = "Perception",
+    ragot = "Ragot",
     reflexes = "Réflexes",
+    survie = "Survie",
     tir = "Tir",
+    tromperie = "Tromperie",
+    vigilance = "Vigilance",
     volonte = "Volonté",
 }
 
@@ -71,60 +80,11 @@ export function augmenterNbDeTestsFaitsComp(perso: Perso, typeComp: TypeCompeten
     return texte;
 }
 
-export const compsDeBase = () => [
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.bagarre,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.armeCaC,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.tir,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.force,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.endurance,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.reflexes,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.mouvement,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.dexterite,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.intelligence,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.volonte,
-    },
-    {
-        val: compDeDepartAleatoire(),
-        nbDeTestsFaits: 0,
-        typeComp: TypeCompetence.charme,
-    },
-];
+export const compsDeBase = () => Object.values(TypeCompetence)
+    .map(typeComp => {
+        return {
+            val: compDeDepartAleatoire(),
+            nbDeTestsFaits: 0,
+            typeComp: typeComp,
+        }
+    });

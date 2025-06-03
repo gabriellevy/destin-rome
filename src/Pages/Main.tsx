@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Paper, Grid2} from '@mui/material';
 import GenPersoForm from "../compos/creation_perso/GenPersoForm";
-import AffichagePerso from "../compos/AffichagePerso";
+import AffichagePerso from "../compos/affichage_perso/AffichagePerso.tsx";
 import Histoire from "../compos/Histoire";
 import InfosMonde from "../compos/InfosMonde";
 
