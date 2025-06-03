@@ -8,14 +8,13 @@ interface CaracProps {
     competenceType: TypeCompetence,
 }
 
-const Carac = ({primaryText, perso, competenceType}:CaracProps) => {
+const Comp = ({primaryText, perso, competenceType}:CaracProps) => {
     return (
-        <ListItem sx={{padding: '0px'}}>
+        <ListItem sx={{padding: '0px',width: "auto"}}>
             <ListItemText
                 primary={
                     <Typography
-                        component="span"
-                        variant="body1"
+                        variant="body2"
                         style={{ display: 'inline', fontSize: '13px' }}
                     >
                         {primaryText}
@@ -23,7 +22,6 @@ const Carac = ({primaryText, perso, competenceType}:CaracProps) => {
                 }
                 secondary={
                     <Typography
-                        component="span"
                         variant="body2"
                         color="textSecondary"
                         style={{ display: 'inline', marginLeft: '10px', fontSize: '13px' }}
@@ -43,143 +41,149 @@ interface CompsProps {
 
 export default function Comps ({perso}:CompsProps) {
 
-        return (<List>
-            <Carac
+        return (<List sx={{
+            display: "flex",
+            flexFlow: "column wrap",
+            gap: "0 10px",
+            height: 300,
+            overflow: "auto"
+        }}>
+            <Comp
                 primaryText="Adresse"
                 perso={perso}
                 competenceType={TypeCompetence.adresse}
             />
-            <Carac
+            <Comp
                 primaryText="Animaux"
                 perso={perso}
                 competenceType={TypeCompetence.animaux}
             />
-            <Carac
+            <Comp
                 primaryText="Armes de corps à corps"
                 perso={perso}
                 competenceType={TypeCompetence.armeCaC}
             />
-            <Carac
+            <Comp
                 primaryText="Bagarre"
                 perso={perso}
                 competenceType={TypeCompetence.bagarre}
             />
-            <Carac
+            <Comp
                 primaryText="Charme"
                 perso={perso}
                 competenceType={TypeCompetence.charme}
             />
-            <Carac
+            <Comp
                 primaryText="Chance"
                 perso={perso}
                 competenceType={TypeCompetence.chance}
             />
-            <Carac
+            <Comp
                 primaryText="Commandement"
                 perso={perso}
                 competenceType={TypeCompetence.commandement}
             />
-            <Carac
+            <Comp
                 primaryText="Dextérité"
                 perso={perso}
                 competenceType={TypeCompetence.dexterite}
             />
-            <Carac
+            <Comp
                 primaryText="Discours"
                 perso={perso}
                 competenceType={TypeCompetence.discours}
             />
-            <Carac
+            <Comp
                 primaryText="Discrétion"
                 perso={perso}
                 competenceType={TypeCompetence.discretion}
             />
-            <Carac
+            <Comp
                 primaryText="Endurance"
                 perso={perso}
                 competenceType={TypeCompetence.endurance}
             />
-            <Carac
+            <Comp
                 primaryText="Évaluation"
                 perso={perso}
                 competenceType={TypeCompetence.evaluation}
             />
-            <Carac
+            <Comp
                 primaryText="Force"
                 perso={perso}
                 competenceType={TypeCompetence.force}
             />
-            <Carac
+            <Comp
                 primaryText="Intelligence"
                 perso={perso}
                 competenceType={TypeCompetence.intelligence}
             />
-            <Carac
+            <Comp
                 primaryText="Intimidation"
                 perso={perso}
                 competenceType={TypeCompetence.intimidation}
             />
-            <Carac
+            <Comp
                 primaryText="Intuition"
                 perso={perso}
                 competenceType={TypeCompetence.intuition}
             />
-            <Carac
+            <Comp
                 primaryText="Jeux"
                 perso={perso}
                 competenceType={TypeCompetence.jeux}
             />
-            <Carac
+            <Comp
                 primaryText="Marchandage"
                 perso={perso}
                 competenceType={TypeCompetence.marchandage}
             />
-            <Carac
+            <Comp
                 primaryText="Mouvement"
                 perso={perso}
                 competenceType={TypeCompetence.mouvement}
             />
-            <Carac
+            <Comp
                 primaryText="Orientation"
                 perso={perso}
                 competenceType={TypeCompetence.orientation}
             />
-            <Carac
+            <Comp
                 primaryText="Perception"
                 perso={perso}
                 competenceType={TypeCompetence.perception}
             />
-            <Carac
+            <Comp
                 primaryText="Ragot"
                 perso={perso}
                 competenceType={TypeCompetence.ragot}
             />
-            <Carac
+            <Comp
                 primaryText="Réflexes"
                 perso={perso}
                 competenceType={TypeCompetence.reflexes}
             />
-            <Carac
+            <Comp
                 primaryText="Survie"
                 perso={perso}
                 competenceType={TypeCompetence.survie}
             />
-            <Carac
+            <Comp
                 primaryText="Tir"
                 perso={perso}
                 competenceType={TypeCompetence.tir}
             />
-            <Carac
+            <Comp
                 primaryText="Tromperie"
                 perso={perso}
                 competenceType={TypeCompetence.tromperie}
             />
-            <Carac
+            <Comp
                 primaryText="Vigilance"
                 perso={perso}
                 competenceType={TypeCompetence.vigilance}
             />
-            <Carac
+            <Comp
                 primaryText="Volonté"
                 perso={perso}
                 competenceType={TypeCompetence.volonte}
