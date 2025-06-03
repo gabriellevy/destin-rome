@@ -93,6 +93,16 @@ export default function AffichagePerso() {
             </List>
             <List>
                 <Carac
+                    primaryText="Adresse"
+                    perso={perso}
+                    competenceType={TypeCompetence.adresse}
+                />
+                <Carac
+                    primaryText="Animaux"
+                    perso={perso}
+                    competenceType={TypeCompetence.animaux}
+                />
+                <Carac
                     primaryText="Armes de corps à corps"
                     perso={perso}
                     competenceType={TypeCompetence.armeCaC}
@@ -108,14 +118,34 @@ export default function AffichagePerso() {
                     competenceType={TypeCompetence.charme}
                 />
                 <Carac
+                    primaryText="Chance"
+                    perso={perso}
+                    competenceType={TypeCompetence.chance}
+                />
+                <Carac
+                    primaryText="Commandement"
+                    perso={perso}
+                    competenceType={TypeCompetence.commandement}
+                />
+                <Carac
                     primaryText="Dextérité"
                     perso={perso}
                     competenceType={TypeCompetence.dexterite}
                 />
                 <Carac
+                    primaryText="Discrétion"
+                    perso={perso}
+                    competenceType={TypeCompetence.discretion}
+                />
+                <Carac
                     primaryText="Endurance"
                     perso={perso}
                     competenceType={TypeCompetence.endurance}
+                />
+                <Carac
+                    primaryText="Évaluation"
+                    perso={perso}
+                    competenceType={TypeCompetence.evaluation}
                 />
                 <Carac
                     primaryText="Force"
@@ -128,9 +158,19 @@ export default function AffichagePerso() {
                     competenceType={TypeCompetence.intelligence}
                 />
                 <Carac
+                    primaryText="Intimidation"
+                    perso={perso}
+                    competenceType={TypeCompetence.intimidation}
+                />
+                <Carac
                     primaryText="Mouvement"
                     perso={perso}
                     competenceType={TypeCompetence.mouvement}
+                />
+                <Carac
+                    primaryText="Perception"
+                    perso={perso}
+                    competenceType={TypeCompetence.perception}
                 />
                 <Carac
                     primaryText="Réflexes"

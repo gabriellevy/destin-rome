@@ -8,17 +8,25 @@ export type Competence = {
 }
 
 export enum TypeCompetence {
-    bagarre = "Bagarre",
+    adresse = "Adresse",
+    animaux = "Animaux",
     armeCaC = "Armes de corps à corps",
-    tir = "Tir",
-    force = "Force",
-    endurance = "Endurance",
-    reflexes = "Réflexes",
-    mouvement = "Mouvement",
-    dexterite = "Dextérité",
-    intelligence = "Intelligence",
-    volonte = "Volonté",
+    bagarre = "Bagarre",
+    chance = "Chance",
     charme = "Charme",
+    commandement = "Commandement",
+    dexterite = "Dextérité",
+    discretion = "Discrétion",
+    endurance = "Endurance",
+    evaluation = "Évaluation",
+    force = "Force",
+    intelligence = "Intelligence",
+    intimidation = "Intimidation",
+    mouvement = "Mouvement",
+    perception = "Perception",
+    reflexes = "Réflexes",
+    tir = "Tir",
+    volonte = "Volonté",
 }
 
 export function compDeDepartAleatoire(): number {
