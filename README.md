@@ -1,2 +1,2 @@
 # destin-rome
-Destin Rome en react
+Destin Rome en reactjs
