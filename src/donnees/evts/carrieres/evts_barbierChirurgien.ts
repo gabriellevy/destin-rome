@@ -59,7 +59,7 @@ export const evts_barbierChirurgien: GroupeEvts = {
                 const resTestMetier:ResultatTest = testMetier(perso, {metier: metiersEnum.boulanger, bonusMalus: 0});
                 texte += resTestMetier.resume;
                 if (resTestMetier.reussi) {
-                    texte += `VOus êtes un médecin efficace et respecté. `;
+                    texte += `Vous êtes un médecin efficace et respecté. `;
                 } else {
                     texte += `Vous avez beaucoup de mal à être un bon médecin. `;
                 }

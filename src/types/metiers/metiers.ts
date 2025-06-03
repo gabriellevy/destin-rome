@@ -4,7 +4,6 @@ import {titreGuildeEnum} from "./Guilde.ts";
 import {Ville} from "../../donnees/geographie/villes.ts";
 
 export enum metiersEnum {
-    pamphletaire = "Pamphlétaire",
     maitre_de_guilde = "Maître de guilde",
     serveur = "Serveur",
     macon = "Maçon",
@@ -28,6 +27,9 @@ export enum metiersEnum {
     boucher = "boucher",
     apprenti_barbier_chirurgien = "Apprenti barbier chirurgien",
     barbier_chirurgien = "Barbier chirurgien",
+    centurion = "Centurion",
+    legionnaire = "Légionnaire",
+    pamphletaire = "Pamphlétaire",
 }
 
 export type Metier = {
@@ -127,6 +129,18 @@ export const metiersObjs: MetierObj = {
         intitule: () => metiersEnum.barbier_chirurgien,
         statut: {rang: 3, metalStatut: MetalStatut.argent},
         statutMax: {rang: 1, metalStatut: MetalStatut.or},
+    },
+    [metiersEnum.centurion] : {
+        nom: metiersEnum.centurion,
+        intitule: () => metiersEnum.centurion,
+        statut: {rang: 4, metalStatut: MetalStatut.argent},
+        statutMax: {rang: 1, metalStatut: MetalStatut.or},
+    },
+    [metiersEnum.legionnaire] : {
+        nom: metiersEnum.legionnaire,
+        intitule: () => metiersEnum.legionnaire,
+        statut: {rang: 1, metalStatut: MetalStatut.argent},
+        statutMax: {rang: 3, metalStatut: MetalStatut.argent},
     },
 
     [metiersEnum.batelier] : {

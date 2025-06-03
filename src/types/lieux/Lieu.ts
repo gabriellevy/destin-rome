@@ -24,7 +24,7 @@ export const lieuParDefaut: Lieu = {
     pays: Pays.empire,
     province: Province.italia,
     sousProvince: SousProvince.latium,
-    ville: Ville.rome,
+    ville: Ville.ostia,
     maison: null,
     enVoyage:false,
     residenceVoyage: null,
