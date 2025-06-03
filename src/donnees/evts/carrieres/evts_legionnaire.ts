@@ -25,7 +25,6 @@ export const evts_legionnaire: GroupeEvts = {
                 }
                 return texte;
             },
-            proba: 100000000,
             conditions: (perso: Perso): boolean =>
                 !aUneCarriere(perso)
                 && age(perso) >= 17

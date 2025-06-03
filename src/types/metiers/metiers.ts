@@ -215,7 +215,7 @@ export type Carriere = {
     metier: Metier,
     groupeLieu?: string, // ou ?
     employeur?: string, // quel groupe ou employeur ?
-    duree: number, // temps passé à pratiquer ce métier
+    duree: number, // temps passé à pratiquer ce métier (en jours)
     competence: number, // sur 100. 1 en débutant
     actif: boolean, // false pour une ancienne carrière (dont on conserve tout de même les compétences etc)
     nbDeTestsFaits: number,

@@ -1,6 +1,7 @@
 import {Carriere, metiersEnum, metiersObjs} from "./metiers.ts";
 import {Perso} from "../Perso.ts";
 import {seuils} from "../comps/Comps.ts";
+import {anneesToJours} from "../Date.ts";
 
 // seulement les carrières actives
 export function aUneCarriere(perso: Perso): boolean {
@@ -22,7 +23,7 @@ export function getCarriereActive(perso: Perso): Carriere|undefined {
 export function suitUneCarriereDe(perso: Perso, metier: metiersEnum): boolean {
     let trouve: boolean = false;
     Array.from(perso.carrieres.values()).forEach(carriere => {
-        if (carriere.metier.nom === metier) {
+        if (carriere.metier.nom === metier && carriere.actif) {
             trouve = true;
         }
     });
@@ -38,18 +39,18 @@ export function travailleEnCeMomentComme(perso: Perso, metier: metiersEnum): boo
 export function neSuitPasUneCarriereDe(perso: Perso, metier: metiersEnum): boolean {
     let trouve: boolean = false;
     Array.from(perso.carrieres.values()).forEach(carriere => {
-        if (carriere.metier.nom === metier) {
+        if (carriere.metier.nom === metier && carriere.actif) {
             trouve = true;
         }
     });
     return !trouve;
 }
 
-export function suitUneCarriereDepuis(perso: Perso, metier: metiersEnum, duree: number): boolean {
+export function suitUneCarriereDepuis(perso: Perso, metier: metiersEnum, dureeEnAnnees: number): boolean {
     let trouve: boolean = false;
     if (perso.carrieres) {
         Array.from(perso.carrieres.values()).forEach(carriere => {
-            if (carriere.metier.nom === metier && carriere.duree >= duree) {
+            if (carriere.metier.nom === metier && carriere.actif && carriere.duree >= anneesToJours(dureeEnAnnees)) {
                 trouve = true;
             }
         });
