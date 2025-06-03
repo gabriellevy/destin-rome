@@ -36,7 +36,7 @@ export const enfant: Perso = {
     jourDuMois: -1,
     date: unAnAvantDebutCampagne, // début du pouvoir derrière le trône 3ème volume
     anneeDeDepart: 490,
-    age: 14,
+    age: 17,
     lieu: lieuParDefaut,
     statut: {rang: 4, metalStatut: MetalStatut.bronze},
     carrieres: new Map<metiersEnum, Carriere>,

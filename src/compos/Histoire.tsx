@@ -24,6 +24,7 @@ import {evts_barbierChirurgien} from "../donnees/evts/carrieres/evts_barbierChir
 import {evts_boucher} from "../donnees/evts/carrieres/evts_boucher.ts";
 import {descriptionVille} from "../donnees/geographie/villes.ts";
 import {evts_gotheim} from "../donnees/evts/lieux/reikland/ubersreik/evts_gotheim.ts";
+import {evts_legionnaire} from "../donnees/evts/carrieres/evts_legionnaire.ts";
 
 let demarre:boolean = false; // le destin a été lancé et est en cours
 
@@ -90,6 +91,7 @@ export default function Histoire() {
             ...filtrerEtPreparerEvts(evts_pretres, perso),
             ...filtrerEtPreparerEvts(evts_ingenieur, perso),
             ...filtrerEtPreparerEvts(evts_batelier, perso),
+            ...filtrerEtPreparerEvts(evts_legionnaire, perso),
             ...filtrerEtPreparerEvts(evts_serveur, perso),
             ...filtrerEtPreparerEvts(evts_macon, perso),
             ...filtrerEtPreparerEvts(evts_bourgmestre, perso),
