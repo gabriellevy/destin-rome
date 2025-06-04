@@ -1,9 +1,10 @@
 import {Lieu} from "./lieux/Lieu.ts";
-import {Statut} from "./Statut.ts";
+import {Statut} from "./statut_social/Statut.ts";
 import {Carriere, metiersEnum} from "./metiers/metiers.ts";
 import {Dieu} from "./Dieu.ts";
 import {Competence} from "./comps/Comps.ts";
 import {maitrises} from "../donnees/maitrises.ts";
+import {ClasseSociale} from "./statut_social/ClasseSociale.ts";
 
 export type Perso = {
     prenom: string;
@@ -19,6 +20,7 @@ export type Perso = {
     mois?: string, // déduit de date mais pratique pour optimiser les calculs de conditions en masse
     jourDuMois: number, // déduit de date mais pratique pour optimiser les calculs de conditions en masse
     statut: Statut;
+    classeSociale: ClasseSociale;
     carrieres: Map<metiersEnum, Carriere>, // TODO : conversion en tableau plutôt : évitera des pb d'export de json etc
     // surtout utile si affilié à un temple (ou très très croyant en un dieu particulier)
     dieu: Dieu,

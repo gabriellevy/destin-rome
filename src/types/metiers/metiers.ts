@@ -1,4 +1,4 @@
-import {MetalStatut, Statut} from "../Statut.ts";
+import {MetalStatut, Statut} from "../statut_social/Statut.ts";
 import {Perso} from "../Perso.ts";
 import {titreGuildeEnum} from "./Guilde.ts";
 import {Ville} from "../../donnees/geographie/villes.ts";

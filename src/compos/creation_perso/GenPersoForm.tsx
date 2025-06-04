@@ -29,6 +29,7 @@ import {
     EMPIRE_PRENOMS_F,
     EMPIRE_PRENOMS_M
 } from "../../donnees/noms/humains/empire.ts";
+import {ClasseSociale} from "../../types/statut_social/ClasseSociale.ts";
 
 interface CharacterFormProps {
     setAfficherForm: (afficher: boolean) => void;
@@ -52,6 +53,7 @@ export default function GenPersoForm({ setAfficherForm }: CharacterFormProps) {
         // age aléatoire
         persoAl.age = 10 + Math.floor(Math.random() * 35);
         vaA(persoAl, getRandomEnumValue(Ville));
+        persoAl.classeSociale = getRandomEnumValue(ClasseSociale);
         persoAl.statut = randomStatut();
         persoAl.sexe = d2() == 1 ? Sexe.femelle : Sexe.male;
         // nom aléatoire (TODO : selon nation, race etc)

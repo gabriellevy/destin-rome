@@ -1,4 +1,4 @@
-import {MetalStatut, Statut} from "../types/Statut.ts";
+import {MetalStatut, Statut} from "../types/statut_social/Statut.ts";
 
 
 export function getRandomEnumValue<T>(anEnum: T): T[keyof T] {

@@ -1,7 +1,7 @@
 import {Perso} from "../../../types/Perso.ts";
 import {metiersEnum} from "../../../types/metiers/metiers.ts";
 import {GroupeEvts} from "../../../types/Evt.ts";
-import {compareStatut, MetalStatut} from "../../../types/Statut.ts";
+import {compareStatut, MetalStatut} from "../../../types/statut_social/Statut.ts";
 import {ResultatTest} from "../../../types/LancerDe.ts";
 import {testComp, testMetier} from "../../../fonctions/des.ts";
 import {TypeCompetence} from "../../../types/comps/Comps.ts";

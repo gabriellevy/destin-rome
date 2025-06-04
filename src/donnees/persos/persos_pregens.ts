@@ -1,12 +1,13 @@
 import {anneesToJours} from "../../types/Date.ts";
-import {enVoyageEnCampanie, lieuRome, lieuParDefaut} from "../../types/lieux/Lieu.ts";
-import {MetalStatut} from "../../types/Statut.ts";
+import {enVoyageEnCampanie, lieuParDefaut, lieuRome} from "../../types/lieux/Lieu.ts";
+import {MetalStatut} from "../../types/statut_social/Statut.ts";
 import {Perso, Sexe} from "../../types/Perso.ts";
 import {compsDeBase} from "../../types/comps/Comps.ts";
 import {evts_programmes} from "../evts/evts_programmes.ts";
 import {Carriere, metiersEnum, metierTest} from "../../types/metiers/metiers.ts";
 import {unAnAvantDebutCampagne} from "../dates/ennemi_interieur.ts";
 import {APOLLON} from "../dieux/dieux.ts";
+import {ClasseSociale} from "../../types/statut_social/ClasseSociale.ts";
 
 export const persoVide: Perso = {
     prenom: "Lucius",
@@ -22,6 +23,7 @@ export const persoVide: Perso = {
     lieu: lieuParDefaut,
     sexe: Sexe.male,
     statut: {rang: 4, metalStatut: MetalStatut.bronze},
+    classeSociale: ClasseSociale.citoyen_romain,
     maitrises: [],
     vitesseExecution: 5000,
     corruption: 0,
@@ -39,6 +41,7 @@ export const enfant: Perso = {
     age: 17,
     lieu: lieuParDefaut,
     statut: {rang: 4, metalStatut: MetalStatut.bronze},
+    classeSociale: ClasseSociale.citoyen_romain,
     carrieres: new Map<metiersEnum, Carriere>,
     comps: compsDeBase(),
     maitrises: [],
@@ -57,6 +60,7 @@ export const jeuneHommeEnVoyageEnCampanie: Perso = {
     date: anneesToJours(490),
     jourDuMois: -1,
     lieu: enVoyageEnCampanie,
+    classeSociale: ClasseSociale.citoyen_romain,
     statut: {rang: 2, metalStatut: MetalStatut.argent},
     carrieres: new Map<metiersEnum, Carriere>,
     comps: compsDeBase(),
@@ -79,6 +83,7 @@ export const richeDeRome: Perso = {
     age: 16,
     jourDuMois: -1,
     lieu: lieuRome,
+    classeSociale: ClasseSociale.citoyen_riche,
     statut: {rang: 1, metalStatut: MetalStatut.argent},
     carrieres: new Map<metiersEnum, Carriere>([[metiersEnum.edile, metierTest]]),
     comps: compsDeBase(),

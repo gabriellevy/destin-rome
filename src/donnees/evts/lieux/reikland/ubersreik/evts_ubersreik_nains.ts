@@ -1,7 +1,7 @@
 import {GroupeEvts} from "../../../../../types/Evt.ts";
 import {Perso} from "../../../../../types/Perso.ts";
 import {ResidenceDeVoyage} from "../../../../../types/lieux/ResidenceDeVoyage.ts";
-import {compareStatut, MetalStatut} from "../../../../../types/Statut.ts";
+import {compareStatut, MetalStatut} from "../../../../../types/statut_social/Statut.ts";
 import {metiersEnum} from "../../../../../types/metiers/metiers.ts";
 import {aUneCarriere, commencerCarriere} from "../../../../../types/metiers/metiersUtils.ts";
 import {Ville} from "../../../../geographie/villes.ts";

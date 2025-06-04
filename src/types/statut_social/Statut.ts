@@ -1,5 +1,9 @@
-import {Option} from "./lieux/Lieu.ts";
+import {Option} from "../lieux/Lieu.ts";
 
+// valeur générale reflétant le statut social d'un personnage à l'échelle de la société
+// bronze : pauvres
+// argent : travailleur
+// or : nobles et très haute bourgeoisie
 export type Statut = {
     rang: number,
     metalStatut: MetalStatut,

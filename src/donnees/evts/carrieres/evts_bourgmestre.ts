@@ -6,7 +6,7 @@ import {testComp, testMetier} from "../../../fonctions/des.ts";
 import {TypeCompetence} from "../../../types/comps/Comps.ts";
 import {age} from "../../../types/Date.ts";
 import {commencerCarriere, travailleEnCeMomentComme} from "../../../types/metiers/metiersUtils.ts";
-import {compareStatut, MetalStatut} from "../../../types/Statut.ts";
+import {compareStatut, MetalStatut} from "../../../types/statut_social/Statut.ts";
 import {tailleVille} from "../../geographie/villes.ts";
 
 export const evts_bourgmestre: GroupeEvts = {
