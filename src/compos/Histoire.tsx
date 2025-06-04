@@ -26,6 +26,7 @@ import {descriptionVille} from "../donnees/geographie/villes.ts";
 import {evts_gotheim} from "../donnees/evts/lieux/reikland/ubersreik/evts_gotheim.ts";
 import {evts_legionnaire} from "../donnees/evts/carrieres/evts_legionnaire.ts";
 import {evts_centurion} from "../donnees/evts/carrieres/evts_centurion.ts";
+import {evts_gladiateur} from "../donnees/evts/carrieres/evts_gladiateur.ts";
 
 let demarre:boolean = false; // le destin a été lancé et est en cours
 
@@ -94,6 +95,7 @@ export default function Histoire() {
             ...filtrerEtPreparerEvts(evts_batelier, perso),
             ...filtrerEtPreparerEvts(evts_centurion, perso),
             ...filtrerEtPreparerEvts(evts_legionnaire, perso),
+            ...filtrerEtPreparerEvts(evts_gladiateur, perso),
             ...filtrerEtPreparerEvts(evts_serveur, perso),
             ...filtrerEtPreparerEvts(evts_macon, perso),
             ...filtrerEtPreparerEvts(evts_bourgmestre, perso),

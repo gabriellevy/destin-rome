@@ -45,7 +45,7 @@ function returnTestResult(resAugmentation: string, intituleTestee:string, valeur
         + (reussi ? "réussi" : "raté")
         + ` (résultat ${resDe} contre compétence ${valeurTestee} ${bonusMalus > 0 ? "+" : ""} ${bonusMalus} ) `
         + resAugmentation
-        + "</i><br/>";
+        + "</i>";
     return {
         reussi : reussi,
         critical: resDe % 10 == Math.floor(resDe / 10) || resDe === 100,

@@ -6,6 +6,7 @@ import {testComp} from "../../../fonctions/des.ts";
 import {TypeCompetence} from "../../../types/comps/Comps.ts";
 import {age} from "../../../types/Date.ts";
 import {aUneCarriere, commencerCarriere, travailleEnCeMomentComme} from "../../../types/metiers/metiersUtils.ts";
+import {ClasseSociale} from "../../../types/statut_social/ClasseSociale.ts";
 
 export const evts_legionnaire: GroupeEvts = {
     evts: [
@@ -28,7 +29,8 @@ export const evts_legionnaire: GroupeEvts = {
             conditions: (perso: Perso): boolean =>
                 !aUneCarriere(perso)
                 && age(perso) >= 17
-                && age(perso) <= 46, // TODO : ajouter la condition d'être citoyen
+                && age(perso) <= 46
+                && perso.classeSociale === ClasseSociale.citoyen_romain,
         },
         {
             id: "evts_legionnaire2",
@@ -36,7 +38,7 @@ export const evts_legionnaire: GroupeEvts = {
                 let texte: string = "";
                 const resTestFor:ResultatTest = testComp(perso, {comp: TypeCompetence.force, bonusMalus: 40});
                 const resTestEnd:ResultatTest = testComp(perso, {comp: TypeCompetence.endurance, bonusMalus: 40});
-                texte += resTestEnd.resume;
+                texte += resTestFor.resume;
                 texte += resTestEnd.resume;
                 if (resTestFor.reussi && resTestEnd.reussi) {
                     texte += `Vous êtes un légionnaire efficace et respecté. `;

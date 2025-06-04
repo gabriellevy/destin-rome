@@ -28,6 +28,7 @@ export enum metiersEnum {
     apprenti_barbier_chirurgien = "Apprenti barbier chirurgien",
     barbier_chirurgien = "Barbier chirurgien",
     centurion = "Centurion",
+    gladiateur = "Gladiateur",
     legionnaire = "Légionnaire",
     pamphletaire = "Pamphlétaire",
 }
@@ -142,7 +143,12 @@ export const metiersObjs: MetierObj = {
         statut: {rang: 1, metalStatut: MetalStatut.argent},
         statutMax: {rang: 3, metalStatut: MetalStatut.argent},
     },
-
+    [metiersEnum.gladiateur] : {
+        nom: metiersEnum.gladiateur,
+        intitule: () => metiersEnum.gladiateur,
+        statut: {rang: 0, metalStatut: MetalStatut.bronze},
+        statutMax: {rang: 3, metalStatut: MetalStatut.argent},
+    },
     [metiersEnum.batelier] : {
         nom: metiersEnum.batelier,
         intitule: () => metiersEnum.batelier,
